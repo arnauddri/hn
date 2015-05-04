@@ -1,5 +1,8 @@
 # Crunching Hacker News
 
+An analysis of Hacker News made from the entire HN history (up until Q1 2015) and using command line tools only.
+
+
 This project was started with the intention of getting better with both command line tools and d3.js. Hacker News Data proved to be a great material to reach these goals as it was easily collectible and of relatively good quality.
 
 The data visualization from this project can be found [here](https://arnauddri.github.io/hn)
