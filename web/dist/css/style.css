@@ -383,6 +383,11 @@ a {
 .home {
   height: 100%;
 }
+.home__stars {
+  position: absolute;
+  right: 10px;
+  padding-top: 30px;
+}
 .home__title {
   top: 50%;
   margin-top: -60px;
@@ -829,6 +834,9 @@ a {
   margin-bottom: 0 !important;
   font-family: 'Proxima-Light';
   font-size: 18px !important;
+}
+.sources .content__legend p {
+  margin: 0;
 }
 .sources .tab {
   padding-top: 12px;
@@ -1296,6 +1304,11 @@ a {
 }
 .end {
   height: 100%;
+}
+.end__stars {
+  position: absolute;
+  right: 10px;
+  padding-top: 30px;
 }
 .end__title {
   top: 50%;
