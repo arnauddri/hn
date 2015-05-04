@@ -1,0 +1,45 @@
+#karma
+  h1
+    margin-top 40px
+  .content
+    &__legend
+      margin-bottom 10px
+    svg
+      display block
+      margin-left auto
+      margin-right auto
+
+#karma .axis path, #karma .axis line
+  fill none
+  stroke #000
+  shape-rendering crispEdges
+
+#karma
+  path
+    fill rgb(248, 210, 189)
+  .axis
+    path
+      fill none
+      stroke #fff
+      shape-rendering crispEdges
+    line
+      stroke #999
+  text
+    fill #333
+    font-family "Proxima-Light"
+  .hover-line
+    line
+      stroke #333
+      stroke-width 0.2px
+  circle
+    fill transparent
+    stroke #999
+    stroke-width 2px
+  svg
+    & > g
+      & > text
+        fill #333
+        font-size 20px
+        font-family 'Proxima-Bold'
+        fill #999
+        font-size 22px

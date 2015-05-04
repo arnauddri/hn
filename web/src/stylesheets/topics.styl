@@ -1,0 +1,115 @@
+corp = #f1c40f
+lang = #f39c12
+technos = #e67e22
+people = #d35400
+security = #c0392b
+
+#topics
+  .content
+    &__legend
+      width 100%
+    .tab
+      &
+        display inline-block
+        position relative
+        width 100%
+        padding-left 0
+      &__item
+        display inline-block
+        list-style none
+        color white
+        background security
+        min-width 66px
+        width 14%
+        margin-left -5px
+        opacity 0.6
+        cursor pointer
+      &__item.active
+        opacity 1
+      &__item:first-child
+        border-top-left-radius 6px
+        border-bottom-left-radius 6px
+      &__item:last-child
+        border-top-right-radius 6px
+        border-bottom-right-radius 6px
+      [data-category|=techno]
+        background technos
+      [data-category|=corp]
+        background corp
+      [data-category|=lang]
+        background lang
+      [data-category|=people]
+        background people
+      [data-category|=security]
+        background security
+
+  #g-chart
+    margin auto
+
+  #g-chart,
+  .g-nodes
+    width 700px
+    height 500px
+    overflow visible
+    position relative
+  .g-overlay
+    fill transparent
+
+  #chart-container
+    &
+      position absolute
+      bottom -800px
+      transition all ease 0.4s
+      text-align center
+      width 100%
+    &.active
+      bottom 0
+    .chart
+      &
+        margin auto
+        background rgba(255, 255, 255, 0.6)
+        border-top-left-radius 6px
+        border-top-right-radius 6px
+        border solid 2px lightGreyClr
+        display inline-block
+        padding-bottom 20px
+        position relative
+      .fa-close
+        cursor pointer
+        right 10px
+        top 10px
+        position absolute
+        color #333
+      p
+        font-family 'Proxima-Light'
+        margin-top 10px
+
+  circle
+    &
+      fill corp
+    &.lang
+      fill lang
+    &.techno
+      fill technos
+    &.people
+      fill people
+    &.security
+      fill security
+
+  text
+    font-family 'Proxima-Light'
+  .domain
+    fill transparent
+
+  .g-node.active
+    circle
+      stroke #333
+
+  .g-label
+    color #333
+    cursor pointer
+    display block
+    text-align center
+    text-decoration none
+    line-height 1em
+    position absolute

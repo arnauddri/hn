@@ -1,0 +1,30 @@
+#topics.topics
+  .container
+    .topics__title.title
+      .title__caption
+        h1 What do people talk about on HN?
+    .topics__content.content
+      .content__legend
+        p WORD OCCURENCES IN STORIES TITLES BETWEEN Q1 2012 AND Q1 2015
+        ul.legend__tab.tab
+          li.tab__item.active(data-category='all') All
+          li.tab__item(data-category='techno') Technology
+          li.tab__item(data-category='lang') Languages
+          li.tab__item(data-category='corp') Companies
+          li.tab__item(data-category='security') Security
+          li.tab__item(data-category='people') People
+      #g-chart
+        svg.g-nodes
+        .g-labels
+      #chart-container
+        .chart
+          i.chart--close.fa.fa-lg.fa-close
+          p Word occurences in stories quarter per quarter
+  .page__controllers--previous
+    .previous
+      a
+        span.glyphicon.glyphicon-chevron-left
+  .page__controllers--next
+    .next
+      a
+        span.glyphicon.glyphicon-chevron-right

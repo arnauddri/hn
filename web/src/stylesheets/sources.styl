@@ -1,0 +1,119 @@
+.sources
+  .content
+    &__legend
+      position relative
+      margin-bottom 0 !important
+      font-family 'Proxima-Light'
+      font-size 18px !important
+  .tab
+    &
+      padding-top 12px
+      position relative
+    &__header
+      padding 0
+      list-style none
+      background #F8F8F8
+      width 80%
+      margin auto
+      padding 8px 0px
+      border-top-left-radius 8px
+      border-top-right-radius 8px
+      font-family 'Proxima-Light'
+    @media(max-width: 780px)
+      &__header
+        width 80%
+    &__control
+      &
+        display inline-block
+        padding 6px 10px
+        margin 0
+        cursor pointer
+        color #5C5C5C
+        border-radius 6px
+        border solid 1px white
+        transition all ease 0.2s
+
+      &.active
+        color white
+        background orangeClr
+        border-color orangeClr
+
+    &__content
+      list-style none
+      padding 0
+    &__item
+      .post
+        &
+          width 80%
+          height 50px
+          border solid 1px #EEEEEE
+          margin auto
+          border-bottom-width 0
+          display inline-table
+          position relative
+        & > a > span
+          display inline-block
+          vertical-align top
+        &__graph
+          position absolute
+          width 60%
+          background red
+          display block
+          left 0
+          top 0
+          height 100%
+          z-index -1
+          background #FF8937
+          opacity 0.1
+          border-top white
+          border-bottom white
+          border-top-right-radius 16px
+          border-bottom-right-radius 16px
+
+        for i in (1..100)
+          &__graph--bg-{i}
+            $width = '%s%' % (i)
+            width $width
+
+        &__score
+          font-size 18px
+          width 10%
+          border-right-width 0 !important
+          font-family 'Proxima-Bold'
+          font-size 32px
+          padding-top 4px
+          color #FF8937
+        &__content
+          &
+            text-align left
+            padding 2px 10px
+            width 90%
+            border-left solid 1px #EEEEEE
+            position relative
+          h3
+            font-size 16px
+            margin-top 6px
+            margin-bottom 0px
+            color #5c5c5c
+            font-family 'Proxima-Light'
+        &__title
+          & > h3, & > small
+            display inline-block
+          small
+            margin-left 10px
+        &__info
+          &
+            display block
+            color #A0A0A0
+          em
+            font-style normal
+            color orangeClr
+        @media(max-width: 780px)
+          &
+            width 80%
+    &__item:last-child
+      .post
+        &
+          border-bottom-width 1px
+          border-bottom-left-radius 8px
+          border-bottom-right-radius 8px

@@ -1,0 +1,85 @@
+.users
+  &__content
+    h1
+      margin-top 40px
+    .axis
+      .tick
+        fill #000
+        font-size 14px
+        font-family 'Proxima-Light'
+    .legend
+      fill greyClr
+    .chart-picker
+      &
+        position absolute
+        width 360px
+        left 50%
+        margin-left -180px
+        text-align center
+      form
+        position relative
+        margin-right auto
+        margin-left auto
+        text-align left
+        margin-left 0
+        margin-top 30px
+      input[type="radio"]
+        &
+          position absolute
+          cursor pointer
+          opacity 0
+          -moz-opacity 0
+          -webkit-opacity 0
+          -o-opacity 0
+        & + label
+          &
+            position relative
+            padding 0 0 0 25px
+            font-size 18px
+            line-height 16px
+            cursor pointer
+          &:before
+            content ""
+            display inline-block
+            position absolute
+            top 0px
+            height 14px
+            width 14px
+            background white
+            border 2px solid #F08641
+            box-shadow inset 0px 0px 0px 2px white
+            -webkit-box-shadow inset 0px 0px 0px 2px white
+            -moz-box-shadow inset 0px 0px 0px 2px white
+            -o-box-shadow inset 0px 0px 0px 2px white
+            -webkit-border-radius 8px
+            -moz-border-radius 8px
+            -o-border-radius 8px
+      input[type="radio"]:checked
+        & + label
+          &:before
+            background #ef8700
+      label
+        &
+          font-size 18px
+          color #7f8c8d
+        &:before
+          left 6px
+
+  &__cagr--line
+    stroke greyClr
+
+  .axis path, .users .axis line
+    fill none
+    stroke #000
+    shape-rendering crispEdges
+
+  .x.axis path, .y.axis path
+    display none
+
+  .tick line
+    stroke darkGreyClr
+
+  .cagr
+    font-family 'Proxima-Bold'
+    fill #999
+    font-size 22px

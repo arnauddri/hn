@@ -1,0 +1,77 @@
+doctype html
+html(lang='en')
+  head
+    meta(http-equiv='Content-Type', content='text/html; charset=UTF-8')
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    meta(name='description', content='')
+    meta(name='author', content='')
+    link(rel='icon', href='./../static/img/favicon.ico')
+    title HN: Crunching the Numbers
+    // Bootstrap core CSS
+    link(href='http://getbootstrap.com/dist/css/bootstrap.min.css', rel='stylesheet')
+    link(href='http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css', rel='stylesheet')
+    link(href='./css/style.css', rel='stylesheet')
+    // HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries
+    //if lt IE 9
+      script(src='https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js')
+      script(src='https://oss.maxcdn.com/respond/1.4.2/respond.min.js')
+  body
+    #slides
+      #p0.page.active
+        include views/home.jade
+      #p1.page.active
+        include views/users.jade
+      #p2.page.active
+        include views/submissions.jade
+      #p3.page.active
+        include views/cohort.jade
+      #p4.page.active
+        include views/topics.jade
+      #p5.page.active
+        include views/sources.jade
+      #p6.page.active
+        include views/karma.jade
+      #p7.page.active.last
+        include views/end.jade
+    .footer
+      .footer--left
+        img.img-circle(src='./../static/img/arnauddri.jpeg')
+        a(href='https://twitter.com/arnauddri')
+          | by <b>@arnauddri</b> with &nbsp;
+          i.fa.fa-heart
+          span.underline
+      .footer--middle
+        ul
+          li
+            i#p0.fa.fa-circle(data-hash='home')
+          li
+            i#p1.fa.fa-circle(data-hash='users')
+          li
+            i#p2.fa.fa-circle(data-hash='submissions')
+          li
+            i#p3.fa.fa-circle(data-hash='cohort')
+          li
+            i#p4.fa.fa-circle(data-hash='topics')
+          li
+            i#p5.fa.fa-circle(data-hash='sources')
+          li
+            i#p6.fa.fa-circle(data-hash='karma')
+          li
+            i#p7.fa.fa-circle(data-hash='end')
+      .footer--right
+        span
+          a(href='https://github.com/arnauddri')
+            | View on GitHub
+            span.underline
+          i.fa.fa-github.fa-lg
+
+    //
+      Bootstrap core JavaScript
+      ==================================================
+    // Placed at the end of the document so the pages load faster
+    script(src='http://d3js.org/d3.v3.js', charset='utf-8')
+    script(src='http://labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js')
+    // IE10 viewport hack for Surface/desktop Windows 8 bug
+    script(src='./js/main.js')

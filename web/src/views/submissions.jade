@@ -1,0 +1,51 @@
+include ./../../data/submissions/submissions.jade
+#submissions.submissions
+  .container
+    .submissions__title.title
+      .title__caption
+        h1 Steve Jobs disparition remains the most upvoted post, ever
+    .submissions__content.content
+      .content__legend
+        p.
+          MOST UPVOTED POSTS PER YEAR - UP UNTIL Q1 2015
+      .tab
+        ul.tab__header
+          li.tab__control 2007
+          li.tab__control 2008
+          li.tab__control 2009
+          li.tab__control 2010
+          li.tab__control 2011
+          li.tab__control 2012
+          li.tab__control 2013
+          li.tab__control 2014
+          li.tab__control.active 2015
+
+        - for (var j = 0; j < 10; ++j) {
+            ul.tab__content(class= (j == 9) ? 'active' : 'hidden' )(data-index=j)
+              - for (var i = 0; i < 10; ++i) {
+                li.tab__item
+                  div.post
+                    a(href='https://news.ycombinator.com/item?id='+top_year[j][i][0], target='_blank')
+                      span.post__score= i+1
+                      span.post__content
+                        span.post__title
+                          h3=top_year[j][i][7]
+                        span.post__info
+                          small
+                            em= top_year[j][i][4]
+                            |  points |&nbsp;
+                            = top_year[j][i][5]
+                            | &nbsp; | &nbsp;
+                            em= top_year[j][i][6]
+                            | &nbsp; comments
+              - }
+        - }
+
+  .page__controllers--previous
+    .previous
+      a
+        span.glyphicon.glyphicon-chevron-left
+  .page__controllers--next
+    .next
+      a
+        span.glyphicon.glyphicon-chevron-right

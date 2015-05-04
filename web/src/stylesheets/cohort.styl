@@ -1,0 +1,51 @@
+.cohort
+  #cohort__legend
+    em
+      color orangeClr
+      font-style normal
+  table
+    &
+      margin auto
+      font-family 'Proxima-Light'
+
+    .head
+      th
+        background #F8F8F8
+        color #5C5C5C
+      tr:first-child
+        th:first-child
+          border-top-left-radius 6px
+        th:last-child
+          border-top-right-radius 6px
+      th
+        text-align center
+      &__quarter
+        width 36px
+        border solid 1px white
+        border-bottom solid 1px #EEEEEE
+      tr
+        height 30px
+
+    .body
+      &__value,
+      &__quarter,
+      &__year,
+      &__people
+        height 25px
+      &__quarter,
+      &__year,
+      &__people
+        width 66px
+      &__people
+        color #5C5C5C
+      td
+        border solid 1px #EEEEEE
+      for i in (1..5)
+        .body__value
+          color #337AB7
+          cursor default
+        &__value--{i}
+          $tpcy = i / 5
+          background rgba(240, 134, 65, $tpcy)
+        .body__value:hover
+          background-color white

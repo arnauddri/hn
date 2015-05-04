@@ -1,0 +1,1459 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="./../static/img/favicon.ico">
+    <title>HN: Crunching the Numbers</title>
+    <!-- Bootstrap core CSS-->
+    <link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="./css/style.css" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries-->
+    <!--if lt IE 9
+    script(src='https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js')
+    script(src='https://oss.maxcdn.com/respond/1.4.2/respond.min.js')
+    -->
+  </head>
+  <body>
+    <div id="slides">
+      <div id="p0" class="page active">
+        <div id="home" class="home">
+          <div class="home__title title">
+            <div class="title__img"><img src="./../static/img/yc.gif"></div>
+            <div class="title__caption">
+              <h1>HACKER NEWS:</h1>
+              <h1>Crunching the Numbers</h1>
+            </div>
+          </div>
+          <div class="page__controllers--next">
+            <div class="next"><a><span class="glyphicon glyphicon-chevron-right"></span></a></div>
+          </div>
+        </div>
+      </div>
+      <div id="p1" class="page active">
+        <div id="users" class="users">
+          <div class="container">
+            <div class="users__title title">
+              <div class="title__caption">
+                <h1>HN's Population Growth has considerably slowed down</h1><i class="info-button fa fa-2x fa-info-circle"></i>
+              </div>
+            </div>
+            <div class="users__content content">
+              <div class="content__legend">
+                <p>The population of registered Hacker News users has grown considerably over time, as shown in the chart below. However, new user registrations flattened out around 10,000 new users per quarter in 2011 and appear... <a class='info-button'>Read More</a></p>
+              </div>
+              <div class="chart-picker">
+                <form>
+                  <label>Show:</label>
+                  <input id="submissions-chart" type="radio" name="radio-group" onclick="submissionChart()" checked="true">
+                  <label for="submissions-chart" onclick="submissionChart()">User&apos;s Submissions</label>
+                  <input id="users-chart" type="radio" name="radio-group" onclick="activeUserChart()">
+                  <label for="users-chart" onclick="activeUserChart()">Active Users</label>
+                </form>
+              </div>
+            </div>
+            <div class="info">
+              <div class="info__content">
+                <div class="info__close"><i class="fa fa-lg fa-close"></i></div>
+                <h3>HN's Population Growth has considerably slowed down</h3>
+                <p>The population of registered Hacker News users has grown considerably up until 2013. New registrations are now stagnating around 10,000 per quarters.</p>
+                <p>User contributions are made of posts and comments: posts have flattened around 60k per quater while comments kepts groing at a decent pace until 2013.</p>
+                <p>
+                  Active users are defined as users who contributed to HN with either a comment or a story post. The current HN API doesn't enable query to get the list of current all of HN users.
+                  
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="page__controllers--previous">
+            <div class="previous"><a><span class="glyphicon glyphicon-chevron-left"></span></a></div>
+          </div>
+          <div class="page__controllers--next">
+            <div class="next"><a><span class="glyphicon glyphicon-chevron-right"></span></a></div>
+          </div>
+        </div>
+      </div>
+      <div id="p2" class="page active">
+        <div id="submissions" class="submissions">
+          <div class="container">
+            <div class="submissions__title title">
+              <div class="title__caption">
+                <h1>Steve Jobs disparition remains the most upvoted post, ever</h1>
+              </div>
+            </div>
+            <div class="submissions__content content">
+              <div class="content__legend">
+                <p>MOST UPVOTED POSTS PER YEAR - UP UNTIL Q1 2015</p>
+              </div>
+              <div class="tab">
+                <ul class="tab__header">
+                  <li class="tab__control">2007</li>
+                  <li class="tab__control">2008</li>
+                  <li class="tab__control">2009</li>
+                  <li class="tab__control">2010</li>
+                  <li class="tab__control">2011</li>
+                  <li class="tab__control">2012</li>
+                  <li class="tab__control">2013</li>
+                  <li class="tab__control">2014</li>
+                  <li class="tab__control active">2015</li>
+                </ul>
+                <ul data-index='0' class="tab__content hidden">
+                  <li class="tab__item">
+                    <div class="post"><a href="https://news.ycombinator.com/item?id=1" target="_blank"><span class="post__score">1</span><span class="post__content"><span class="post__title">
+                            <h3>Y Combinator</h3></span><span class="post__info"><small><em>57</em> points |&nbsp;ycombinator.com&nbsp; | &nbsp;<em>18</em>&nbsp; comments</small></span></span></a></div>
+                  </li>
+                  <li class="tab__item">
+                    <div class="post"><a href="https://news.ycombinator.com/item?id=2" target="_blank"><span class="post__score">2</span><span class="post__content"><span class="post__title">
+                            <h3>A Student's Guide to Startups</h3></span><span class="post__info"><small><em>15</em> points |&nbsp;paulgraham.com&nbsp; | &nbsp;<em>1</em>&nbsp; comments</small></span></span></a></div>
+                  </li>
+                  <li class="tab__item">
+                    <div class="post"><a href="https://news.ycombinator.com/item?id=27" target="_blank"><span class="post__score">3</span><span class="post__content"><span class="post__title">
+                            <h3>Google Acquires YouTube For $1.6B</h3></span><span class="post__info"><small><em>13</em> points |&nbsp;google.com&nbsp; | &nbsp;<em>1</em>&nbsp; comments</small></span></span></a></div>
+                  </li>
+                  <li class="tab__item">
+                    <div class="post"><a href="https://news.ycombinator.com/item?id=57" target="_blank"><span class="post__score">4</span><span class="post__content"><span class="post__title">
+                            <h3>Black triangle: a useful shorthand and metaphor</h3></span><span class="post__info"><small><em>12</em> points |&nbsp;rampantgames.com&nbsp; | &nbsp;<em>2</em>&nbsp; comments</small></span></span></a></div>
+                  </li>
+                  <li class="tab__item">
+                    <div class="post"><a href="https://news.ycombinator.com/item?id=16" target="_blank"><span class="post__score">5</span><span class="post__content"><span class="post__title">
+                            <h3>Feld: Question Regarding NDAs</h3></span><span class="post__info"><small><em>12</em> points |&nbsp;feld.com&nbsp; | &nbsp;<em>1</em>&nbsp; comments</small></span></span></a></div>
+                  </li>
+                  <li class="tab__item">
+                    <div class="post"><a href="https://news.ycombinator.com/item?id=24" target="_blank"><span class="post__score">6</span><span class="post__content"><span class="post__title">
+                            <h3>MySpace: Not a purely viral start</h3></span><span class="post__info"><small><em>11</em> points |&nbsp;startup-review.com&nbsp; | &nbsp;<em>1</em>&nbsp; comments</small></span></span></a></div>
+                  </li>
+                  <li class="tab__item">
+                    <div class="post"><a href="https://news.ycombinator.com/item?id=48" target="_blank"><span class="post__score">7</span><span class="post__content"><span class="post__title">
+                            <h3>The richest graduate student ever</h3></span><span class="post__info"><small><em>9</em> points |&nbsp;nytimes.com&nbsp; | &nbsp;<em>1</em>&nbsp; comments</small></span></span></a></div>
+                  </li>
+                  <li class="tab__item">
+                    <div class="post"><a href="https://news.ycombinator.com/item?id=58" target="_blank"><span class="post__score">8</span><span class="post__content"><span class="post__title">
+                            <h3>NYT: How Friendster Blew It</h3></span><span class="post__info"><small><em>7</em> points |&nbsp;nytimes.com&nbsp; | &nbsp;<em>1</em>&nbsp; comments</small></span></span></a></div>
+                  </li>
+                  <li class="tab__item">
+                    <div class="post"><a href="https://news.ycombinator.com/item?id=53" target="_blank"><span class="post__score">9</span><span class="post__content"><span class="post__title">
+                            <h3>Top ten geek business myths</h3></span><span class="post__info"><small><em>7</em> points |&nbsp;rondam.blogspot.com&nbsp; | &nbsp;<em>1</em>&nbsp; comments</small></span></span></a></div>
+                  </li>
+                  <li class="tab__item">
+                    <div class="post"><a href="https://news.ycombinator.com/item?id=5" target="_blank"><span class="post__score">10</span><span class="post__content"><span class="post__title">
+                            <h3>Google YouTube acquisition announcement could come tonight</h3></span><span class="post__info"><small><em>7</em> points |&nbsp;techcrunch.com&nbsp; | &nbsp;<em>1</em>&nbsp; comments</small></span></span></a></div>
+                  </li>
+                </ul>
+                <ul data-index='1' class="tab__content hidden">
+                  <li class="tab__item">
+                    <div class="post"><a href="https://news.ycombinator.com/item?id=363" target="_blank"><span class="post__score">1</span><span class="post__content"><span class="post__title">
+                            <h3>Please tell us what features you'd like in news.ycombinator</h3></span><span class="post__info"><small><em>263</em> points |&nbsp;news.ycombinator.com&nbsp; | &nbsp;<em>1443</em>&nbsp; comments</small></span></span></a></div>
+                  </li>
+                  <li class="tab__item">
+                    <div class="post"><a href="https://news.ycombinator.com/item?id=48294" target="_blank"><span class="post__score">2</span><span class="post__content"><span class="post__title">
+                            <h3>How Not to Die</h3></span><span class="post__info"><small><em>173</em> points |&nbsp;paulgraham.com&nbsp; | &nbsp;<em>145</em>&nbsp; comments</small></span></span></a></div>
+                  </li>
+                  <li class="tab__item">
+                    <div class="post"><a href="https://news.ycombinator.com/item?id=27550" target="_blank"><span class="post__score">3</span><span class="post__content"><span class="post__title">
+                            <h3>Finally voting without refresh</h3></span><span class="post__info"><small><em>170</em> points |&nbsp;ycombinator.com&nbsp; | &nbsp;<em>42</em>&nbsp; comments</small></span></span></a></div>
+                  </li>
+                  <li class="tab__item">
+                    <div class="post"><a href="https://news.ycombinator.com/item?id=189" target="_blank"><span class="post__score">4</span><span class="post__content"><span class="post__title">
+                            <h3>Why we made this site</h3></span><span class="post__info"><small><em>165</em> points |&nbsp;ycombinator.com&nbsp; | &nbsp;<em>98</em>&nbsp; comments</small></span></span></a></div>
+                  </li>
+                  <li class="tab__item">
+                    <div class="post"><a href="https://news.ycombinator.com/item?id=42317" target="_blank"><span class="post__score">5</span><span class="post__content"><span class="post__title">
+                            <h3>Hacker News</h3></span><span class="post__info"><small><em>153</em> points |&nbsp;ycombinator.com&nbsp; | &nbsp;<em>76</em>&nbsp; comments</small></span></span></a></div>
+                  </li>
+                  <li class="tab__item">
+                    <div class="post"><a href="https://news.ycombinator.com/item?id=45698" target="_blank"><span class="post__score">6</span><span class="post__content"><span class="post__title">
+                            <h3>Holding a program in one's head</h3></span><span class="post__info"><small><em>146</em> points |&nbsp;paulgraham.com&nbsp; | &nbsp;<em>129</em>&nbsp; comments</small></span></span></a></div>
+                  </li>
+                  <li class="tab__item">
+                    <div class="post"><a href="https://news.ycombinator.com/item?id=57195" target="_blank"><span class="post__score">7</span><span class="post__content"><span class="post__title">
+                            <h3>CMU professor gives his last lesson on life</h3></span><span class="post__info"><small><em>125</em> points |&nbsp;post-gazette.com&nbsp; | &nbsp;<em>33</em>&nbsp; comments</small></span></span></a></div>
+                  </li>
+                  <li class="tab__item">
+                    <div class="post"><a href="https://news.ycombinator.com/item?id=65327" target="_blank"><span class="post__score">8</span><span class="post__content"><span class="post__title">
+                            <h3>Why to Apply to YCombinator</h3></span><span class="post__info"><small><em>112</em> points |&nbsp;&nbsp; | &nbsp;<em>36</em>&nbsp; comments</small></span></span></a></div>
+                  </li>
+                  <li class="tab__item">
+                    <div class="post"><a href="https://news.ycombinator.com/item?id=6668" target="_blank"><span class="post__score">9</span><span class="post__content"><span class="post__title">
+                            <h3>Why to Not Not Start a Startup</h3></span><span class="post__info"><small><em>107</em> points |&nbsp;paulgraham.com&nbsp; | &nbsp;<em>37</em>&nbsp; comments</small></span></span></a></div>
+                  </li>
+                  <li class="tab__item">
+                    <div class="post"><a href="https://news.ycombinator.com/item?id=63009" target="_blank"><span class="post__score">10</span><span class="post__content"><span class="post__title">
+                            <h3>The Future of Web Startups</h3></span><span class="post__info"><small><em>107</em> points |&nbsp;paulgraham.com&nbsp; | &nbsp;<em>160</em>&nbsp; comments</small></span></span></a></div>
+                  </li>
+                </ul>
+                <ul data-index='2' class="tab__content hidden">
+                  <li class="tab__item">
+                    <div class="post"><a href="https://news.ycombinator.com/item?id=250704" target="_blank"><span class="post__score">1</span><span class="post__content"><span class="post__title">
+                            <h3>Startup Ideas We'd Like to Fund</h3></span><span class="post__info"><small><em>530</em> points |&nbsp;ycombinator.com&nbsp; | &nbsp;<em>384</em>&nbsp; comments</small></span></span></a></div>
+                  </li>
+                  <li class="tab__item">
+                    <div class="post"><a href="https://news.ycombinator.com/item?id=334355" target="_blank"><span class="post__score">2</span><span class="post__content"><span class="post__title">
+                            <h3>Why to Start a Startup in a Bad Economy</h3></span><span class="post__info"><small><em>253</em> points |&nbsp;paulgraham.com&nbsp; | &nbsp;<em>200</em>&nbsp; comments</small></span></span></a></div>
+                  </li>
+                  <li class="tab__item">
+                    <div class="post"><a href="https://news.ycombinator.com/item?id=395330" target="_blank"><span class="post__score">3</span><span class="post__content"><span class="post__title">
+                            <h3>Love Internet Style</h3></span><span class="post__info"><small><em>240</em> points |&nbsp;youtube.com&nbsp; | &nbsp;<em>44</em>&nbsp; comments</small></span></span></a></div>
+                  </li>
+                  <li class="tab__item">
+                    <div class="post"><a href="https://news.ycombinator.com/item?id=106398" target="_blank"><span class="post__score">4</span><span class="post__content"><span class="post__title">
+                            <h3>Arc's Out</h3></span><span class="post__info"><small><em>239</em> points |&nbsp;paulgraham.com&nbsp; | &nbsp;<em>124</em>&nbsp; comments</small></span></span></a></div>
+                  </li>
+                  <li class="tab__item">
+                    <div class="post"><a href="https://news.ycombinator.com/item?id=141898" target="_blank"><span class="post__score">5</span><span class="post__content"><span class="post__title">
+                            <h3>You weren't meant to have a boss</h3></span><span class="post__info"><small><em>237</em> points |&nbsp;paulgraham.com&nbsp; | &nbsp;<em>300</em>&nbsp; comments</small></span></span></a></div>
+                  </li>
+                  <li class="tab__item">
+                    <div class="post"><a href="https://news.ycombinator.com/item?id=412785" target="_blank"><span class="post__score">6</span><span class="post__content"><span class="post__title">
+                            <h3>Wow check out this guy's comment</h3></span><span class="post__info"><small><em>231</em> points |&nbsp;&nbsp; | &nbsp;<em>101</em>&nbsp; comments</small></span></span></a></div>
+                  </li>
+                  <li class="tab__item">
+                    <div class="post"><a href="https://news.ycombinator.com/item?id=310056" target="_blank"><span class="post__score">7</span><span class="post__content"><span class="post__title">
+                            <h3>Golden Rules for Making Money by P. T. Barnum (1880)</h3></span><span class="post__info"><small><em>227</em> points |&nbsp;fourmilab.ch&nbsp; | &nbsp;<em>56</em>&nbsp; comments</small></span></span></a></div>
+                  </li>
+                  <li class="tab__item">
+                    <div class="post"><a href="https://news.ycombinator.com/item?id=205918" target="_blank"><span class="post__score">8</span><span class="post__content"><span class="post__title">
+                            <h3>Congrats to PG on getting hitched</h3></span><span class="post__info"><small><em>227</em> points |&nbsp;twitter.com&nbsp; | &nbsp;<em>95</em>&nbsp; comments</small></span></span></a></div>
+                  </li>
+                  <li class="tab__item">
+                    <div class="post"><a href="https://news.ycombinator.com/item?id=355819" target="_blank"><span class="post__score">9</span><span class="post__content"><span class="post__title">
+                            <h3>Single? Lawn Signs Conquer the American Landscape</h3></span><span class="post__info"><small><em>226</em> points |&nbsp;themetricsystem.rjmetrics.com&nbsp; | &nbsp;<em>27</em>&nbsp; comments</small></span></span></a></div>
+                  </li>
+                  <li class="tab__item">
+                    <div class="post"><a href="https://news.ycombinator.com/item?id=394609" target="_blank"><span class="post__score">10</span><span class="post__content"><span class="post__title">
+                            <h3>I don't want to work very hard</h3></span><span class="post__info"><small><em>221</em> points |&nbsp;&nbsp; | &nbsp;<em>196</em>&nbsp; comments</small></span></span></a></div>
+                  </li>
+                </ul>
+                <ul data-index='3' class="tab__content hidden">
+                  <li class="tab__item">
+                    <div class="post"><a href="https://news.ycombinator.com/item?id=639976" target="_blank"><span class="post__score">1</span><span class="post__content"><span class="post__title">
+                            <h3>How I Hacked Hacker News (with arc security advisory)</h3></span><span class="post__info"><small><em>918</em> points |&nbsp;&nbsp; | &nbsp;<em>79</em>&nbsp; comments</small></span></span></a></div>
+                  </li>
+                  <li class="tab__item">
+                    <div class="post"><a href="https://news.ycombinator.com/item?id=459289" target="_blank"><span class="post__score">2</span><span class="post__content"><span class="post__title">
+                            <h3>New users: Welcome.  Please read the site guidelines.</h3></span><span class="post__info"><small><em>533</em> points |&nbsp;&nbsp; | &nbsp;<em>138</em>&nbsp; comments</small></span></span></a></div>
+                  </li>
+                  <li class="tab__item">
+                    <div class="post"><a href="https://news.ycombinator.com/item?id=491750" target="_blank"><span class="post__score">3</span><span class="post__content"><span class="post__title">
+                            <h3>Last.fm: 'Techcrunch are full of shit'</h3></span><span class="post__info"><small><em>404</em> points |&nbsp;blog.last.fm&nbsp; | &nbsp;<em>100</em>&nbsp; comments</small></span></span></a></div>
+                  </li>
+                  <li class="tab__item">
+                    <div class="post"><a href="https://news.ycombinator.com/item?id=533849" target="_blank"><span class="post__score">4</span><span class="post__content"><span class="post__title">
+                            <h3>Google is Evil Worse than PayPal: Don't use Google Checkout for your business</h3></span><span class="post__info"><small><em>394</em> points |&nbsp;slash7.com&nbsp; | &nbsp;<em>151</em>&nbsp; comments</small></span></span></a></div>
+                  </li>
+                  <li class="tab__item">
+                    <div class="post"><a href="https://news.ycombinator.com/item?id=495053" target="_blank"><span class="post__score">5</span><span class="post__content"><span class="post__title">
+                            <h3>What I've Learned from Hacker News</h3></span><span class="post__info"><small><em>375</em> points |&nbsp;paulgraham.com&nbsp; | &nbsp;<em>120</em>&nbsp; comments</small></span></span></a></div>
+                  </li>
+                  <li class="tab__item">
+                    <div class="post"><a href="https://news.ycombinator.com/item?id=496946" target="_blank"><span class="post__score">6</span><span class="post__content"><span class="post__title">
+                            <h3>How FriendFeed uses MySQL to store schema-less data</h3></span><span class="post__info"><small><em>352</em> points |&nbsp;bret.appspot.com&nbsp; | &nbsp;<em>86</em>&nbsp; comments</small></span></span></a></div>
+                  </li>
+                  <li class="tab__item">
+                    <div class="post"><a href="https://news.ycombinator.com/item?id=1019360" target="_blank"><span class="post__score">7</span><span class="post__content"><span class="post__title">
+                            <h3>The story of my startup (and the Google/YouTube API trap)</h3></span><span class="post__info"><small><em>347</em> points |&nbsp;totlol.com&nbsp; | &nbsp;<em>119</em>&nbsp; comments</small></span></span></a></div>
+                  </li>
+                  <li class="tab__item">
+                    <div class="post"><a href="https://news.ycombinator.com/item?id=1011258" target="_blank"><span class="post__score">8</span><span class="post__content"><span class="post__title">
+                            <h3>How do I know China wrecked the Copenhagen deal? I was in the room.</h3></span><span class="post__info"><small><em>347</em> points |&nbsp;guardian.co.uk&nbsp; | &nbsp;<em>189</em>&nbsp; comments</small></span></span></a></div>
+                  </li>
+                  <li class="tab__item">
+                    <div class="post"><a href="https://news.ycombinator.com/item?id=495336" target="_blank"><span class="post__score">9</span><span class="post__content"><span class="post__title">
+                            <h3>The most surprising thing I've seen in 2009 courtesy of Etherpad</h3></span><span class="post__info"><small><em>335</em> points |&nbsp;etherpad.com&nbsp; | &nbsp;<em>126</em>&nbsp; comments</small></span></span></a></div>
+                  </li>
+                  <li class="tab__item">
+                    <div class="post"><a href="https://news.ycombinator.com/item?id=512178" target="_blank"><span class="post__score">10</span><span class="post__content"><span class="post__title">
+                            <h3>The Innards of Erlang</h3></span><span class="post__info"><small><em>325</em> points |&nbsp;contekst.org&nbsp; | &nbsp;<em>34</em>&nbsp; comments</small></span></span></a></div>
+                  </li>
+                </ul>
+                <ul data-index='4' class="tab__content hidden">
+                  <li class="tab__item">
+                    <div class="post"><a href="https://news.ycombinator.com/item?id=2014555" target="_blank"><span class="post__score">1</span><span class="post__content"><span class="post__title">
+                            <h3>Introducing Word Lens</h3></span><span class="post__info"><small><em>1277</em> points |&nbsp;questvisual.com&nbsp; | &nbsp;<em>284</em>&nbsp; comments</small></span></span></a></div>
+                  </li>
+                  <li class="tab__item">
+                    <div class="post"><a href="https://news.ycombinator.com/item?id=2003515" target="_blank"><span class="post__score">2</span><span class="post__content"><span class="post__title">
+                            <h3>Today you tomorrow me</h3></span><span class="post__info"><small><em>1257</em> points |&nbsp;reddit.com&nbsp; | &nbsp;<em>208</em>&nbsp; comments</small></span></span></a></div>
+                  </li>
+                  <li class="tab__item">
+                    <div class="post"><a href="https://news.ycombinator.com/item?id=1048800" target="_blank"><span class="post__score">3</span><span class="post__content"><span class="post__title">
+                            <h3>A new approach to China</h3></span><span class="post__info"><small><em>1134</em> points |&nbsp;googleblog.blogspot.com&nbsp; | &nbsp;<em>380</em>&nbsp; comments</small></span></span></a></div>
+                  </li>
+                  <li class="tab__item">
+                    <div class="post"><a href="https://news.ycombinator.com/item?id=1714377" target="_blank"><span class="post__score">4</span><span class="post__content"><span class="post__title">
+                            <h3>So A Blogger Walks Into A Bar</h3></span><span class="post__info"><small><em>1087</em> points |&nbsp;techcrunch.com&nbsp; | &nbsp;<em>235</em>&nbsp; comments</small></span></span></a></div>
+                  </li>
+                  <li class="tab__item">
+                    <div class="post"><a href="https://news.ycombinator.com/item?id=1952356" target="_blank"><span class="post__score">5</span><span class="post__content"><span class="post__title">
+                            <h3>Google Beatbox</h3></span><span class="post__info"><small><em>1016</em> points |&nbsp;translate.google.com&nbsp; | &nbsp;<em>96</em>&nbsp; comments</small></span></span></a></div>
+                  </li>
+                  <li class="tab__item">
+                    <div class="post"><a href="https://news.ycombinator.com/item?id=1304310" target="_blank"><span class="post__score">6</span><span class="post__content"><span class="post__title">
+                            <h3>Thoughts on Flash</h3></span><span class="post__info"><small><em>951</em> points |&nbsp;apple.com&nbsp; | &nbsp;<em>507</em>&nbsp; comments</small></span></span></a></div>
+                  </li>
+                  <li class="tab__item">
+                    <div class="post"><a href="https://news.ycombinator.com/item?id=1571427" target="_blank"><span class="post__score">7</span><span class="post__content"><span class="post__title">
+                            <h3>Keep calm &amp; carry on: What you didn't know about the reddit story</h3></span><span class="post__info"><small><em>767</em> points |&nbsp;alexisohanian.com&nbsp; | &nbsp;<em>87</em>&nbsp; comments</small></span></span></a></div>
+                  </li>
+                  <li class="tab__item">
+                    <div class="post"><a href="https://news.ycombinator.com/item?id=1585850" target="_blank"><span class="post__score">8</span><span class="post__content"><span class="post__title">
+                            <h3>P ≠ NP</h3></span><span class="post__info"><small><em>732</em> points |&nbsp;scribd.com&nbsp; | &nbsp;<em>198</em>&nbsp; comments</small></span></span></a></div>
+                  </li>
+                  <li class="tab__item">
+                    <div class="post"><a href="https://news.ycombinator.com/item?id=1982489" target="_blank"><span class="post__score">9</span><span class="post__content"><span class="post__title">
+                            <h3>Salesforce Buys Heroku (YC W08) For $212 Million In Cash</h3></span><span class="post__info"><small><em>712</em> points |&nbsp;techcrunch.com&nbsp; | &nbsp;<em>201</em>&nbsp; comments</small></span></span></a></div>
+                  </li>
+                  <li class="tab__item">
+                    <div class="post"><a href="https://news.ycombinator.com/item?id=1827928" target="_blank"><span class="post__score">10</span><span class="post__content"><span class="post__title">
+                            <h3>Firesheep: Easy HTTP session hijacking from within Firefox</h3></span><span class="post__info"><small><em>708</em> points |&nbsp;codebutler.com&nbsp; | &nbsp;<em>344</em>&nbsp; comments</small></span></span></a></div>
+                  </li>
+                </ul>
+                <ul data-index='5' class="tab__content hidden">
+                  <li class="tab__item">
+                    <div class="post"><a href="https://news.ycombinator.com/item?id=3078128" target="_blank"><span class="post__score">1</span><span class="post__content"><span class="post__title">
+                            <h3>Steve Jobs has passed away.</h3></span><span class="post__info"><small><em>4271</em> points |&nbsp;apple.com&nbsp; | &nbsp;<em>376</em>&nbsp; comments</small></span></span></a></div>
+                  </li>
+                  <li class="tab__item">
+                    <div class="post"><a href="https://news.ycombinator.com/item?id=3288671" target="_blank"><span class="post__score">2</span><span class="post__content"><span class="post__title">
+                            <h3>Watch a VC use my name to sell a con</h3></span><span class="post__info"><small><em>2316</em> points |&nbsp;jwz.org&nbsp; | &nbsp;<em>292</em>&nbsp; comments</small></span></span></a></div>
+                  </li>
+                  <li class="tab__item">
+                    <div class="post"><a href="https://news.ycombinator.com/item?id=3105526" target="_blank"><span class="post__score">3</span><span class="post__content"><span class="post__title">
+                            <h3>Rob Pike: Dennis Ritchie has died</h3></span><span class="post__info"><small><em>1924</em> points |&nbsp;plus.google.com&nbsp; | &nbsp;<em>204</em>&nbsp; comments</small></span></span></a></div>
+                  </li>
+                  <li class="tab__item">
+                    <div class="post"><a href="https://news.ycombinator.com/item?id=2555349" target="_blank"><span class="post__score">4</span><span class="post__content"><span class="post__title">
+                            <h3>Boot a linux kernel right inside your browser.</h3></span><span class="post__info"><small><em>1793</em> points |&nbsp;bellard.org&nbsp; | &nbsp;<em>243</em>&nbsp; comments</small></span></span></a></div>
+                  </li>
+                  <li class="tab__item">
+                    <div class="post"><a href="https://news.ycombinator.com/item?id=3174961" target="_blank"><span class="post__score">5</span><span class="post__content"><span class="post__title">
+                            <h3>A Sisters Eulogy for Steve Jobs</h3></span><span class="post__info"><small><em>1722</em> points |&nbsp;nytimes.com&nbsp; | &nbsp;<em>128</em>&nbsp; comments</small></span></span></a></div>
+                  </li>
+                  <li class="tab__item">
+                    <div class="post"><a href="https://news.ycombinator.com/item?id=3383209" target="_blank"><span class="post__score">6</span><span class="post__content"><span class="post__title">
+                            <h3>Paul Graham: SOPA Supporting Companies No Longer Allowed At YC Demo Day</h3></span><span class="post__info"><small><em>1716</em> points |&nbsp;techcrunch.com&nbsp; | &nbsp;<em>277</em>&nbsp; comments</small></span></span></a></div>
+                  </li>
+                  <li class="tab__item">
+                    <div class="post"><a href="https://news.ycombinator.com/item?id=2922756" target="_blank"><span class="post__score">7</span><span class="post__content"><span class="post__title">
+                            <h3>Steve Jobs Resigns as CEO of Apple</h3></span><span class="post__info"><small><em>1638</em> points |&nbsp;finance.yahoo.com&nbsp; | &nbsp;<em>308</em>&nbsp; comments</small></span></span></a></div>
+                  </li>
+                  <li class="tab__item">
+                    <div class="post"><a href="https://news.ycombinator.com/item?id=3151233" target="_blank"><span class="post__score">8</span><span class="post__content"><span class="post__title">
+                            <h3>John McCarthy Has Died</h3></span><span class="post__info"><small><em>1595</em> points |&nbsp;en.wikipedia.org&nbsp; | &nbsp;<em>218</em>&nbsp; comments</small></span></span></a></div>
+                  </li>
+                  <li class="tab__item">
+                    <div class="post"><a href="https://news.ycombinator.com/item?id=3029872" target="_blank"><span class="post__score">9</span><span class="post__content"><span class="post__title">
+                            <h3>I was once a Facebook fool</h3></span><span class="post__info"><small><em>1368</em> points |&nbsp;public.numair.com&nbsp; | &nbsp;<em>168</em>&nbsp; comments</small></span></span></a></div>
+                  </li>
+                  <li class="tab__item">
+                    <div class="post"><a href="https://news.ycombinator.com/item?id=3053883" target="_blank"><span class="post__score">10</span><span class="post__content"><span class="post__title">
+                            <h3>Stripe: instant payment processing for developers</h3></span><span class="post__info"><small><em>1236</em> points |&nbsp;stripe.com&nbsp; | &nbsp;<em>350</em>&nbsp; comments</small></span></span></a></div>
+                  </li>
+                </ul>
+                <ul data-index='6' class="tab__content hidden">
+                  <li class="tab__item">
+                    <div class="post"><a href="https://news.ycombinator.com/item?id=3742902" target="_blank"><span class="post__score">1</span><span class="post__content"><span class="post__title">
+                            <h3>Show HN: This up votes itself</h3></span><span class="post__info"><small><em>3381</em> points |&nbsp;news.ycombinator.com&nbsp; | &nbsp;<em>83</em>&nbsp; comments</small></span></span></a></div>
+                  </li>
+                  <li class="tab__item">
+                    <div class="post"><a href="https://news.ycombinator.com/item?id=3491542" target="_blank"><span class="post__score">2</span><span class="post__content"><span class="post__title">
+                            <h3>Request for Startups: Kill Hollywood.</h3></span><span class="post__info"><small><em>2026</em> points |&nbsp;ycombinator.com&nbsp; | &nbsp;<em>673</em>&nbsp; comments</small></span></span></a></div>
+                  </li>
+                  <li class="tab__item">
+                    <div class="post"><a href="https://news.ycombinator.com/item?id=3673462" target="_blank"><span class="post__score">3</span><span class="post__content"><span class="post__title">
+                            <h3>$1B of TSA Nude Body Scanners Made Worthless By Blog</h3></span><span class="post__info"><small><em>1611</em> points |&nbsp;tsaoutofourpants.wordpress.com&nbsp; | &nbsp;<em>332</em>&nbsp; comments</small></span></span></a></div>
+                  </li>
+                  <li class="tab__item">
+                    <div class="post"><a href="https://news.ycombinator.com/item?id=3836978" target="_blank"><span class="post__score">4</span><span class="post__content"><span class="post__title">
+                            <h3>Light Table - a new IDE concept</h3></span><span class="post__info"><small><em>1561</em> points |&nbsp;chris-granger.com&nbsp; | &nbsp;<em>300</em>&nbsp; comments</small></span></span></a></div>
+                  </li>
+                  <li class="tab__item">
+                    <div class="post"><a href="https://news.ycombinator.com/item?id=4682392" target="_blank"><span class="post__score">5</span><span class="post__content"><span class="post__title">
+                            <h3>Outlawed by Amazon DRM</h3></span><span class="post__info"><small><em>1426</em> points |&nbsp;bekkelund.net&nbsp; | &nbsp;<em>483</em>&nbsp; comments</small></span></span></a></div>
+                  </li>
+                  <li class="tab__item">
+                    <div class="post"><a href="https://news.ycombinator.com/item?id=3824908" target="_blank"><span class="post__score">6</span><span class="post__content"><span class="post__title">
+                            <h3>Show HN: Meteor a realtime JavaScript framework</h3></span><span class="post__info"><small><em>1362</em> points |&nbsp;meteor.com&nbsp; | &nbsp;<em>332</em>&nbsp; comments</small></span></span></a></div>
+                  </li>
+                  <li class="tab__item">
+                    <div class="post"><a href="https://news.ycombinator.com/item?id=3736037" target="_blank"><span class="post__score">7</span><span class="post__content"><span class="post__title">
+                            <h3>Lighten up</h3></span><span class="post__info"><small><em>1335</em> points |&nbsp;therealkatie.net&nbsp; | &nbsp;<em>772</em>&nbsp; comments</small></span></span></a></div>
+                  </li>
+                  <li class="tab__item">
+                    <div class="post"><a href="https://news.ycombinator.com/item?id=4312731" target="_blank"><span class="post__score">8</span><span class="post__content"><span class="post__title">
+                            <h3>Company withdrawing from Facebook as analytics show 80% of ad clicks from bots</h3></span><span class="post__info"><small><em>1309</em> points |&nbsp;facebook.com&nbsp; | &nbsp;<em>366</em>&nbsp; comments</small></span></span></a></div>
+                  </li>
+                  <li class="tab__item">
+                    <div class="post"><a href="https://news.ycombinator.com/item?id=3587730" target="_blank"><span class="post__score">9</span><span class="post__content"><span class="post__title">
+                            <h3>Hit men click whores and paid apologists: Welcome to the Silicon Cesspool</h3></span><span class="post__info"><small><em>1290</em> points |&nbsp;realdanlyons.com&nbsp; | &nbsp;<em>199</em>&nbsp; comments</small></span></span></a></div>
+                  </li>
+                  <li class="tab__item">
+                    <div class="post"><a href="https://news.ycombinator.com/item?id=3559631" target="_blank"><span class="post__score">10</span><span class="post__content"><span class="post__title">
+                            <h3>Farewell Stack Exchange</h3></span><span class="post__info"><small><em>1212</em> points |&nbsp;codinghorror.com&nbsp; | &nbsp;<em>213</em>&nbsp; comments</small></span></span></a></div>
+                  </li>
+                </ul>
+                <ul data-index='7' class="tab__content hidden">
+                  <li class="tab__item">
+                    <div class="post"><a href="https://news.ycombinator.com/item?id=6258422" target="_blank"><span class="post__score">1</span><span class="post__content"><span class="post__title">
+                            <h3>Don't Fly During Ramadan</h3></span><span class="post__info"><small><em>2617</em> points |&nbsp;varnull.adityamukerjee.net&nbsp; | &nbsp;<em>962</em>&nbsp; comments</small></span></span></a></div>
+                  </li>
+                  <li class="tab__item">
+                    <div class="post"><a href="https://news.ycombinator.com/item?id=6201586" target="_blank"><span class="post__score">2</span><span class="post__content"><span class="post__title">
+                            <h3>Hyperloop</h3></span><span class="post__info"><small><em>2549</em> points |&nbsp;spacex.com&nbsp; | &nbsp;<em>943</em>&nbsp; comments</small></span></span></a></div>
+                  </li>
+                  <li class="tab__item">
+                    <div class="post"><a href="https://news.ycombinator.com/item?id=5046845" target="_blank"><span class="post__score">3</span><span class="post__content"><span class="post__title">
+                            <h3>Aaron Swartz commits suicide</h3></span><span class="post__info"><small><em>2076</em> points |&nbsp;tech.mit.edu&nbsp; | &nbsp;<em>564</em>&nbsp; comments</small></span></span></a></div>
+                  </li>
+                  <li class="tab__item">
+                    <div class="post"><a href="https://news.ycombinator.com/item?id=5371725" target="_blank"><span class="post__score">4</span><span class="post__content"><span class="post__title">
+                            <h3>Google Reader shutting down</h3></span><span class="post__info"><small><em>1926</em> points |&nbsp;googleblog.blogspot.com&nbsp; | &nbsp;<em>704</em>&nbsp; comments</small></span></span></a></div>
+                  </li>
+                  <li class="tab__item">
+                    <div class="post"><a href="https://news.ycombinator.com/item?id=5218288" target="_blank"><span class="post__score">5</span><span class="post__content"><span class="post__title">
+                            <h3>A Most Peculiar Test Drive</h3></span><span class="post__info"><small><em>1815</em> points |&nbsp;teslamotors.com&nbsp; | &nbsp;<em>581</em>&nbsp; comments</small></span></span></a></div>
+                  </li>
+                  <li class="tab__item">
+                    <div class="post"><a href="https://news.ycombinator.com/item?id=6181081" target="_blank"><span class="post__score">6</span><span class="post__content"><span class="post__title">
+                            <h3>Lavabit abruptly shuts down</h3></span><span class="post__info"><small><em>1747</em> points |&nbsp;lavabit.com&nbsp; | &nbsp;<em>643</em>&nbsp; comments</small></span></span></a></div>
+                  </li>
+                  <li class="tab__item">
+                    <div class="post"><a href="https://news.ycombinator.com/item?id=5215884" target="_blank"><span class="post__score">7</span><span class="post__content"><span class="post__title">
+                            <h3>Heroku's Ugly Secret: The story of how the cloud-king turned its back on Rails</h3></span><span class="post__info"><small><em>1715</em> points |&nbsp;rapgenius.com&nbsp; | &nbsp;<em>426</em>&nbsp; comments</small></span></span></a></div>
+                  </li>
+                  <li class="tab__item">
+                    <div class="post"><a href="https://news.ycombinator.com/item?id=5330998" target="_blank"><span class="post__score">8</span><span class="post__content"><span class="post__title">
+                            <h3>Breaking down Amazon's mega dropdown</h3></span><span class="post__info"><small><em>1691</em> points |&nbsp;bjk5.com&nbsp; | &nbsp;<em>193</em>&nbsp; comments</small></span></span></a></div>
+                  </li>
+                  <li class="tab__item">
+                    <div class="post"><a href="https://news.ycombinator.com/item?id=6133349" target="_blank"><span class="post__score">9</span><span class="post__content"><span class="post__title">
+                            <h3>XKeyscore: NSA program collects 'nearly everything a user does on the internet'</h3></span><span class="post__info"><small><em>1624</em> points |&nbsp;theguardian.com&nbsp; | &nbsp;<em>625</em>&nbsp; comments</small></span></span></a></div>
+                  </li>
+                  <li class="tab__item">
+                    <div class="post"><a href="https://news.ycombinator.com/item?id=6641378" target="_blank"><span class="post__score">10</span><span class="post__content"><span class="post__title">
+                            <h3>NSA infiltrates links to Yahoo Google data centers worldwide</h3></span><span class="post__info"><small><em>1525</em> points |&nbsp;washingtonpost.com&nbsp; | &nbsp;<em>597</em>&nbsp; comments</small></span></span></a></div>
+                  </li>
+                </ul>
+                <ul data-index='8' class="tab__content hidden">
+                  <li class="tab__item">
+                    <div class="post"><a href="https://news.ycombinator.com/item?id=8532261" target="_blank"><span class="post__score">1</span><span class="post__content"><span class="post__title">
+                            <h3>Tim Cook Speaks Up</h3></span><span class="post__info"><small><em>3086</em> points |&nbsp;businessweek.com&nbsp; | &nbsp;<em>1039</em>&nbsp; comments</small></span></span></a></div>
+                  </li>
+                  <li class="tab__item">
+                    <div class="post"><a href="https://news.ycombinator.com/item?id=7373566" target="_blank"><span class="post__score">2</span><span class="post__content"><span class="post__title">
+                            <h3>2048</h3></span><span class="post__info"><small><em>2732</em> points |&nbsp;gabrielecirulli.github.io&nbsp; | &nbsp;<em>398</em>&nbsp; comments</small></span></span></a></div>
+                  </li>
+                  <li class="tab__item">
+                    <div class="post"><a href="https://news.ycombinator.com/item?id=8595905" target="_blank"><span class="post__score">3</span><span class="post__content"><span class="post__title">
+                            <h3>icrosoft takes .NET open source and cross-platform</h3></span><span class="post__info"><small><em>2376</em> points |&nbsp;news.microsoft.com&nbsp; | &nbsp;<em>772</em>&nbsp; comments</small></span></span></a></div>
+                  </li>
+                  <li class="tab__item">
+                    <div class="post"><a href="https://news.ycombinator.com/item?id=8624160" target="_blank"><span class="post__score">4</span><span class="post__content"><span class="post__title">
+                            <h3>Launching in 2015: A Certificate Authority to Encrypt the Entire Web</h3></span><span class="post__info"><small><em>2019</em> points |&nbsp;eff.org&nbsp; | &nbsp;<em>423</em>&nbsp; comments</small></span></span></a></div>
+                  </li>
+                  <li class="tab__item">
+                    <div class="post"><a href="https://news.ycombinator.com/item?id=7216471" target="_blank"><span class="post__score">5</span><span class="post__content"><span class="post__title">
+                            <h3>Today is The Day We Fight Back</h3></span><span class="post__info"><small><em>1958</em> points |&nbsp;thedaywefightback.org&nbsp; | &nbsp;<em>260</em>&nbsp; comments</small></span></span></a></div>
+                  </li>
+                  <li class="tab__item">
+                    <div class="post"><a href="https://news.ycombinator.com/item?id=7884560" target="_blank"><span class="post__score">6</span><span class="post__content"><span class="post__title">
+                            <h3>All Our Patent Are Belong To You</h3></span><span class="post__info"><small><em>1855</em> points |&nbsp;teslamotors.com&nbsp; | &nbsp;<em>322</em>&nbsp; comments</small></span></span></a></div>
+                  </li>
+                  <li class="tab__item">
+                    <div class="post"><a href="https://news.ycombinator.com/item?id=7566069" target="_blank"><span class="post__score">7</span><span class="post__content"><span class="post__title">
+                            <h3>Drop Dropbox</h3></span><span class="post__info"><small><em>1825</em> points |&nbsp;drop-dropbox.com&nbsp; | &nbsp;<em>1045</em>&nbsp; comments</small></span></span></a></div>
+                  </li>
+                  <li class="tab__item">
+                    <div class="post"><a href="https://news.ycombinator.com/item?id=8422599" target="_blank"><span class="post__score">8</span><span class="post__content"><span class="post__title">
+                            <h3>Hacker News API</h3></span><span class="post__info"><small><em>1715</em> points |&nbsp;blog.ycombinator.com&nbsp; | &nbsp;<em>307</em>&nbsp; comments</small></span></span></a></div>
+                  </li>
+                  <li class="tab__item">
+                    <div class="post"><a href="https://news.ycombinator.com/item?id=7548991" target="_blank"><span class="post__score">9</span><span class="post__content"><span class="post__title">
+                            <h3>The Heartbleed Bug</h3></span><span class="post__info"><small><em>1634</em> points |&nbsp;heartbleed.com&nbsp; | &nbsp;<em>537</em>&nbsp; comments</small></span></span></a></div>
+                  </li>
+                  <li class="tab__item">
+                    <div class="post"><a href="https://news.ycombinator.com/item?id=7211514" target="_blank"><span class="post__score">10</span><span class="post__content"><span class="post__title">
+                            <h3>Facebook Fraud [video]</h3></span><span class="post__info"><small><em>1583</em> points |&nbsp;youtube.com&nbsp; | &nbsp;<em>280</em>&nbsp; comments</small></span></span></a></div>
+                  </li>
+                </ul>
+                <ul data-index='9' class="tab__content active">
+                  <li class="tab__item">
+                    <div class="post"><a href="https://news.ycombinator.com/item?id=9003791" target="_blank"><span class="post__score">1</span><span class="post__content"><span class="post__title">
+                            <h3>Email Encryption Software Relies on One Guy Who Is Going Broken</h3></span><span class="post__info"><small><em>2088</em> points |&nbsp;propublica.org&nbsp; | &nbsp;<em>453</em>&nbsp; comments</small></span></span></a></div>
+                  </li>
+                  <li class="tab__item">
+                    <div class="post"><a href="https://news.ycombinator.com/item?id=8936257" target="_blank"><span class="post__score">2</span><span class="post__content"><span class="post__title">
+                            <h3>What should I do about YouTube?</h3></span><span class="post__info"><small><em>1391</em> points |&nbsp;zoekeating.tumblr.com&nbsp; | &nbsp;<em>290</em>&nbsp; comments</small></span></span></a></div>
+                  </li>
+                  <li class="tab__item">
+                    <div class="post"><a href="https://news.ycombinator.com/item?id=8997615" target="_blank"><span class="post__score">3</span><span class="post__content"><span class="post__title">
+                            <h3>FCC Chairman: This Is How We Will Ensure Net Neutrality</h3></span><span class="post__info"><small><em>1274</em> points |&nbsp;wired.com&nbsp; | &nbsp;<em>418</em>&nbsp; comments</small></span></span></a></div>
+                  </li>
+                  <li class="tab__item">
+                    <div class="post"><a href="https://news.ycombinator.com/item?id=8878754" target="_blank"><span class="post__score">4</span><span class="post__content"><span class="post__title">
+                            <h3>Hi It’s Google Corporate Development</h3></span><span class="post__info"><small><em>1227</em> points |&nbsp;medium.com&nbsp; | &nbsp;<em>278</em>&nbsp; comments</small></span></span></a></div>
+                  </li>
+                  <li class="tab__item">
+                    <div class="post"><a href="https://news.ycombinator.com/item?id=9045305" target="_blank"><span class="post__score">5</span><span class="post__content"><span class="post__title">
+                            <h3>Fuck It I'm Going Back to Firefox</h3></span><span class="post__info"><small><em>1173</em> points |&nbsp;gizmodo.com&nbsp; | &nbsp;<em>637</em>&nbsp; comments</small></span></span></a></div>
+                  </li>
+                  <li class="tab__item">
+                    <div class="post"><a href="https://news.ycombinator.com/item?id=9072424" target="_blank"><span class="post__score">6</span><span class="post__content"><span class="post__title">
+                            <h3>Lenovo Caught Installing Adware on New Computers</h3></span><span class="post__info"><small><em>1120</em> points |&nbsp;thenextweb.com&nbsp; | &nbsp;<em>414</em>&nbsp; comments</small></span></span></a></div>
+                  </li>
+                  <li class="tab__item">
+                    <div class="post"><a href="https://news.ycombinator.com/item?id=8955426" target="_blank"><span class="post__score">7</span><span class="post__content"><span class="post__title">
+                            <h3>YouTube now defaults to HTML5 video</h3></span><span class="post__info"><small><em>1035</em> points |&nbsp;youtube-eng.blogspot.com&nbsp; | &nbsp;<em>393</em>&nbsp; comments</small></span></span></a></div>
+                  </li>
+                  <li class="tab__item">
+                    <div class="post"><a href="https://news.ycombinator.com/item?id=8924755" target="_blank"><span class="post__score">8</span><span class="post__content"><span class="post__title">
+                            <h3>Hands-On with Microsoft's New Holographic Goggles</h3></span><span class="post__info"><small><em>946</em> points |&nbsp;wired.com&nbsp; | &nbsp;<em>325</em>&nbsp; comments</small></span></span></a></div>
+                  </li>
+                  <li class="tab__item">
+                    <div class="post"><a href="https://news.ycombinator.com/item?id=8848182" target="_blank"><span class="post__score">9</span><span class="post__content"><span class="post__title">
+                            <h3>Intel Compute Stick</h3></span><span class="post__info"><small><em>929</em> points |&nbsp;intel.com&nbsp; | &nbsp;<em>336</em>&nbsp; comments</small></span></span></a></div>
+                  </li>
+                  <li class="tab__item">
+                    <div class="post"><a href="https://news.ycombinator.com/item?id=8863451" target="_blank"><span class="post__score">10</span><span class="post__content"><span class="post__title">
+                            <h3>Announcing Rust 1.0 Alpha</h3></span><span class="post__info"><small><em>894</em> points |&nbsp;blog.rust-lang.org&nbsp; | &nbsp;<em>243</em>&nbsp; comments</small></span></span></a></div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="page__controllers--previous">
+            <div class="previous"><a><span class="glyphicon glyphicon-chevron-left"></span></a></div>
+          </div>
+          <div class="page__controllers--next">
+            <div class="next"><a><span class="glyphicon glyphicon-chevron-right"></span></a></div>
+          </div>
+        </div>
+      </div>
+      <div id="p3" class="page active">
+        <div id="cohort" class="cohort">
+          <div class="container">
+            <div class="cohort__title title">
+              <div class="title__caption">
+                <h1>HN's Cohort Analysis: Retention almost halved since 2010</h1>
+              </div>
+            </div>
+            <div class="cohort__content content">
+              <div class="content__legend">
+                <p id="cohort__legend">
+                  <em>8254</em> people first posted on HN in <em>Q1 2010</em>, <em>4111</em> were still posting <em>1</em> quarters later, i.e. <em>50%</em>
+                  
+                </p>
+              </div>
+            </div>
+            <div class="cohort__content content">
+              <table>
+                <thead class="head">
+                  <tr>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                    <th colspan="34">Quarters after</th>
+                  </tr>
+                  <tr>
+                    <th>Year</th>
+                    <th>Quarter</th>
+                    <th>People</th>
+                    <th class="head__quarter">1</th>
+                    <th class="head__quarter">2</th>
+                    <th class="head__quarter">3</th>
+                    <th class="head__quarter">4</th>
+                    <th class="head__quarter">5</th>
+                    <th class="head__quarter">6</th>
+                    <th class="head__quarter">7</th>
+                    <th class="head__quarter">8</th>
+                    <th class="head__quarter">9</th>
+                    <th class="head__quarter">10</th>
+                    <th class="head__quarter">11</th>
+                    <th class="head__quarter">12</th>
+                    <th class="head__quarter">13</th>
+                    <th class="head__quarter">14</th>
+                    <th class="head__quarter">15</th>
+                    <th class="head__quarter">16</th>
+                    <th class="head__quarter">17</th>
+                    <th class="head__quarter">18</th>
+                    <th class="head__quarter">19</th>
+                    <th class="head__quarter">20</th>
+                    <th class="head__quarter">21</th>
+                  </tr>
+                </thead>
+                <tbody class="body">
+                  <tr>
+                    <td rowspan="4" class="body__year">2010</td>
+                    <td class="body__quarter">Q1
+                    </td>
+                    <td class="body__people">8254</td>
+                    <td data-n='1' data-pct='50' data-start='8254' data-now='4111' data-quarter="Q1 2010" class="body__value body__value--5">50%</td>
+                    <td data-n='2' data-pct='45' data-start='8254' data-now='3709' data-quarter="Q2 2010" class="body__value body__value--5">45%</td>
+                    <td data-n='3' data-pct='42' data-start='8254' data-now='3481' data-quarter="Q3 2010" class="body__value body__value--4">42%</td>
+                    <td data-n='4' data-pct='40' data-start='8254' data-now='3330' data-quarter="Q4 2010" class="body__value body__value--4">40%</td>
+                    <td data-n='5' data-pct='39' data-start='8254' data-now='3178' data-quarter="Q5 2010" class="body__value body__value--4">39%</td>
+                    <td data-n='6' data-pct='37' data-start='8254' data-now='3050' data-quarter="Q6 2010" class="body__value body__value--4">37%</td>
+                    <td data-n='7' data-pct='36' data-start='8254' data-now='2945' data-quarter="Q7 2010" class="body__value body__value--4">36%</td>
+                    <td data-n='8' data-pct='34' data-start='8254' data-now='2833' data-quarter="Q8 2010" class="body__value body__value--3">34%</td>
+                    <td data-n='9' data-pct='33' data-start='8254' data-now='2725' data-quarter="Q9 2010" class="body__value body__value--3">33%</td>
+                    <td data-n='10' data-pct='32' data-start='8254' data-now='2608' data-quarter="Q10 2010" class="body__value body__value--3">32%</td>
+                    <td data-n='11' data-pct='30' data-start='8254' data-now='2516' data-quarter="Q11 2010" class="body__value body__value--3">30%</td>
+                    <td data-n='12' data-pct='29' data-start='8254' data-now='2409' data-quarter="Q12 2010" class="body__value body__value--3">29%</td>
+                    <td data-n='13' data-pct='28' data-start='8254' data-now='2304' data-quarter="Q13 2010" class="body__value body__value--3">28%</td>
+                    <td data-n='14' data-pct='27' data-start='8254' data-now='2193' data-quarter="Q14 2010" class="body__value body__value--3">27%</td>
+                    <td data-n='15' data-pct='25' data-start='8254' data-now='2079' data-quarter="Q15 2010" class="body__value body__value--3">25%</td>
+                    <td data-n='16' data-pct='24' data-start='8254' data-now='1948' data-quarter="Q16 2010" class="body__value body__value--2">24%</td>
+                    <td data-n='17' data-pct='22' data-start='8254' data-now='1809' data-quarter="Q17 2010" class="body__value body__value--2">22%</td>
+                    <td data-n='18' data-pct='20' data-start='8254' data-now='1642' data-quarter="Q18 2010" class="body__value body__value--2">20%</td>
+                    <td data-n='19' data-pct='18' data-start='8254' data-now='1448' data-quarter="Q19 2010" class="body__value body__value--2">18%</td>
+                    <td data-n='20' data-pct='15' data-start='8254' data-now='1205' data-quarter="Q20 2010" class="body__value body__value--2">15%</td>
+                    <td data-n='21' data-pct='7' data-start='8254' data-now='614' data-quarter="Q21 2010" class="body__value body__value--1">7%</td>
+                  </tr>
+                  <tr>
+                    <td class="body__quarter">Q2
+                    </td>
+                    <td class="body__people">8118</td>
+                    <td data-n='1' data-pct='46' data-start='8118' data-now='3766' data-quarter="Q1 2010" class="body__value body__value--5">46%</td>
+                    <td data-n='2' data-pct='41' data-start='8118' data-now='3330' data-quarter="Q2 2010" class="body__value body__value--4">41%</td>
+                    <td data-n='3' data-pct='38' data-start='8118' data-now='3105' data-quarter="Q3 2010" class="body__value body__value--4">38%</td>
+                    <td data-n='4' data-pct='36' data-start='8118' data-now='2930' data-quarter="Q4 2010" class="body__value body__value--4">36%</td>
+                    <td data-n='5' data-pct='34' data-start='8118' data-now='2774' data-quarter="Q5 2010" class="body__value body__value--3">34%</td>
+                    <td data-n='6' data-pct='33' data-start='8118' data-now='2663' data-quarter="Q6 2010" class="body__value body__value--3">33%</td>
+                    <td data-n='7' data-pct='31' data-start='8118' data-now='2548' data-quarter="Q7 2010" class="body__value body__value--3">31%</td>
+                    <td data-n='8' data-pct='30' data-start='8118' data-now='2439' data-quarter="Q8 2010" class="body__value body__value--3">30%</td>
+                    <td data-n='9' data-pct='29' data-start='8118' data-now='2317' data-quarter="Q9 2010" class="body__value body__value--3">29%</td>
+                    <td data-n='10' data-pct='27' data-start='8118' data-now='2218' data-quarter="Q10 2010" class="body__value body__value--3">27%</td>
+                    <td data-n='11' data-pct='26' data-start='8118' data-now='2114' data-quarter="Q11 2010" class="body__value body__value--3">26%</td>
+                    <td data-n='12' data-pct='25' data-start='8118' data-now='2015' data-quarter="Q12 2010" class="body__value body__value--3">25%</td>
+                    <td data-n='13' data-pct='24' data-start='8118' data-now='1935' data-quarter="Q13 2010" class="body__value body__value--2">24%</td>
+                    <td data-n='14' data-pct='23' data-start='8118' data-now='1841' data-quarter="Q14 2010" class="body__value body__value--2">23%</td>
+                    <td data-n='15' data-pct='21' data-start='8118' data-now='1703' data-quarter="Q15 2010" class="body__value body__value--2">21%</td>
+                    <td data-n='16' data-pct='19' data-start='8118' data-now='1573' data-quarter="Q16 2010" class="body__value body__value--2">19%</td>
+                    <td data-n='17' data-pct='18' data-start='8118' data-now='1429' data-quarter="Q17 2010" class="body__value body__value--2">18%</td>
+                    <td data-n='18' data-pct='16' data-start='8118' data-now='1266' data-quarter="Q18 2010" class="body__value body__value--2">16%</td>
+                    <td data-n='19' data-pct='13' data-start='8118' data-now='1034' data-quarter="Q19 2010" class="body__value body__value--1">13%</td>
+                    <td data-n='20' data-pct='7' data-start='8118' data-now='540' data-quarter="Q20 2010" class="body__value body__value--1">7%</td>
+                  </tr>
+                  <tr>
+                    <td class="body__quarter">Q3
+                    </td>
+                    <td class="body__people">9310</td>
+                    <td data-n='1' data-pct='46' data-start='9310' data-now='4248' data-quarter="Q1 2010" class="body__value body__value--5">46%</td>
+                    <td data-n='2' data-pct='40' data-start='9310' data-now='3722' data-quarter="Q2 2010" class="body__value body__value--4">40%</td>
+                    <td data-n='3' data-pct='37' data-start='9310' data-now='3467' data-quarter="Q3 2010" class="body__value body__value--4">37%</td>
+                    <td data-n='4' data-pct='35' data-start='9310' data-now='3270' data-quarter="Q4 2010" class="body__value body__value--4">35%</td>
+                    <td data-n='5' data-pct='33' data-start='9310' data-now='3090' data-quarter="Q5 2010" class="body__value body__value--3">33%</td>
+                    <td data-n='6' data-pct='32' data-start='9310' data-now='2960' data-quarter="Q6 2010" class="body__value body__value--3">32%</td>
+                    <td data-n='7' data-pct='30' data-start='9310' data-now='2832' data-quarter="Q7 2010" class="body__value body__value--3">30%</td>
+                    <td data-n='8' data-pct='29' data-start='9310' data-now='2679' data-quarter="Q8 2010" class="body__value body__value--3">29%</td>
+                    <td data-n='9' data-pct='27' data-start='9310' data-now='2545' data-quarter="Q9 2010" class="body__value body__value--3">27%</td>
+                    <td data-n='10' data-pct='26' data-start='9310' data-now='2426' data-quarter="Q10 2010" class="body__value body__value--3">26%</td>
+                    <td data-n='11' data-pct='25' data-start='9310' data-now='2306' data-quarter="Q11 2010" class="body__value body__value--3">25%</td>
+                    <td data-n='12' data-pct='23' data-start='9310' data-now='2180' data-quarter="Q12 2010" class="body__value body__value--2">23%</td>
+                    <td data-n='13' data-pct='22' data-start='9310' data-now='2059' data-quarter="Q13 2010" class="body__value body__value--2">22%</td>
+                    <td data-n='14' data-pct='21' data-start='9310' data-now='1916' data-quarter="Q14 2010" class="body__value body__value--2">21%</td>
+                    <td data-n='15' data-pct='19' data-start='9310' data-now='1777' data-quarter="Q15 2010" class="body__value body__value--2">19%</td>
+                    <td data-n='16' data-pct='17' data-start='9310' data-now='1606' data-quarter="Q16 2010" class="body__value body__value--2">17%</td>
+                    <td data-n='17' data-pct='15' data-start='9310' data-now='1401' data-quarter="Q17 2010" class="body__value body__value--2">15%</td>
+                    <td data-n='18' data-pct='12' data-start='9310' data-now='1157' data-quarter="Q18 2010" class="body__value body__value--1">12%</td>
+                    <td data-n='19' data-pct='6' data-start='9310' data-now='586' data-quarter="Q19 2010" class="body__value body__value--1">6%</td>
+                  </tr>
+                  <tr>
+                    <td class="body__quarter">Q4
+                    </td>
+                    <td class="body__people">10442</td>
+                    <td data-n='1' data-pct='45' data-start='10442' data-now='4658' data-quarter="Q1 2010" class="body__value body__value--5">45%</td>
+                    <td data-n='2' data-pct='39' data-start='10442' data-now='4086' data-quarter="Q2 2010" class="body__value body__value--4">39%</td>
+                    <td data-n='3' data-pct='36' data-start='10442' data-now='3771' data-quarter="Q3 2010" class="body__value body__value--4">36%</td>
+                    <td data-n='4' data-pct='34' data-start='10442' data-now='3532' data-quarter="Q4 2010" class="body__value body__value--3">34%</td>
+                    <td data-n='5' data-pct='32' data-start='10442' data-now='3353' data-quarter="Q5 2010" class="body__value body__value--3">32%</td>
+                    <td data-n='6' data-pct='31' data-start='10442' data-now='3186' data-quarter="Q6 2010" class="body__value body__value--3">31%</td>
+                    <td data-n='7' data-pct='29' data-start='10442' data-now='3023' data-quarter="Q7 2010" class="body__value body__value--3">29%</td>
+                    <td data-n='8' data-pct='28' data-start='10442' data-now='2879' data-quarter="Q8 2010" class="body__value body__value--3">28%</td>
+                    <td data-n='9' data-pct='26' data-start='10442' data-now='2735' data-quarter="Q9 2010" class="body__value body__value--3">26%</td>
+                    <td data-n='10' data-pct='25' data-start='10442' data-now='2599' data-quarter="Q10 2010" class="body__value body__value--3">25%</td>
+                    <td data-n='11' data-pct='24' data-start='10442' data-now='2460' data-quarter="Q11 2010" class="body__value body__value--2">24%</td>
+                    <td data-n='12' data-pct='22' data-start='10442' data-now='2323' data-quarter="Q12 2010" class="body__value body__value--2">22%</td>
+                    <td data-n='13' data-pct='21' data-start='10442' data-now='2162' data-quarter="Q13 2010" class="body__value body__value--2">21%</td>
+                    <td data-n='14' data-pct='19' data-start='10442' data-now='2002' data-quarter="Q14 2010" class="body__value body__value--2">19%</td>
+                    <td data-n='15' data-pct='17' data-start='10442' data-now='1827' data-quarter="Q15 2010" class="body__value body__value--2">17%</td>
+                    <td data-n='16' data-pct='16' data-start='10442' data-now='1629' data-quarter="Q16 2010" class="body__value body__value--2">16%</td>
+                    <td data-n='17' data-pct='13' data-start='10442' data-now='1314' data-quarter="Q17 2010" class="body__value body__value--1">13%</td>
+                    <td data-n='18' data-pct='6' data-start='10442' data-now='659' data-quarter="Q18 2010" class="body__value body__value--1">6%</td>
+                  </tr>
+                  <tr>
+                    <td rowspan="4" class="body__year">2011</td>
+                    <td class="body__quarter">Q1
+                    </td>
+                    <td class="body__people">12613</td>
+                    <td data-n='1' data-pct='44' data-start='12613' data-now='5491' data-quarter="Q1 2011" class="body__value body__value--4">44%</td>
+                    <td data-n='2' data-pct='38' data-start='12613' data-now='4795' data-quarter="Q2 2011" class="body__value body__value--4">38%</td>
+                    <td data-n='3' data-pct='35' data-start='12613' data-now='4420' data-quarter="Q3 2011" class="body__value body__value--4">35%</td>
+                    <td data-n='4' data-pct='33' data-start='12613' data-now='4128' data-quarter="Q4 2011" class="body__value body__value--3">33%</td>
+                    <td data-n='5' data-pct='31' data-start='12613' data-now='3864' data-quarter="Q5 2011" class="body__value body__value--3">31%</td>
+                    <td data-n='6' data-pct='29' data-start='12613' data-now='3617' data-quarter="Q6 2011" class="body__value body__value--3">29%</td>
+                    <td data-n='7' data-pct='27' data-start='12613' data-now='3427' data-quarter="Q7 2011" class="body__value body__value--3">27%</td>
+                    <td data-n='8' data-pct='26' data-start='12613' data-now='3237' data-quarter="Q8 2011" class="body__value body__value--3">26%</td>
+                    <td data-n='9' data-pct='24' data-start='12613' data-now='3050' data-quarter="Q9 2011" class="body__value body__value--2">24%</td>
+                    <td data-n='10' data-pct='22' data-start='12613' data-now='2833' data-quarter="Q10 2011" class="body__value body__value--2">22%</td>
+                    <td data-n='11' data-pct='21' data-start='12613' data-now='2659' data-quarter="Q11 2011" class="body__value body__value--2">21%</td>
+                    <td data-n='12' data-pct='20' data-start='12613' data-now='2499' data-quarter="Q12 2011" class="body__value body__value--2">20%</td>
+                    <td data-n='13' data-pct='18' data-start='12613' data-now='2278' data-quarter="Q13 2011" class="body__value body__value--2">18%</td>
+                    <td data-n='14' data-pct='16' data-start='12613' data-now='2044' data-quarter="Q14 2011" class="body__value body__value--2">16%</td>
+                    <td data-n='15' data-pct='14' data-start='12613' data-now='1763' data-quarter="Q15 2011" class="body__value body__value--1">14%</td>
+                    <td data-n='16' data-pct='12' data-start='12613' data-now='1461' data-quarter="Q16 2011" class="body__value body__value--1">12%</td>
+                    <td data-n='17' data-pct='6' data-start='12613' data-now='695' data-quarter="Q17 2011" class="body__value body__value--1">6%</td>
+                  </tr>
+                  <tr>
+                    <td class="body__quarter">Q2
+                    </td>
+                    <td class="body__people">13155</td>
+                    <td data-n='1' data-pct='42' data-start='13155' data-now='5475' data-quarter="Q1 2011" class="body__value body__value--4">42%</td>
+                    <td data-n='2' data-pct='35' data-start='13155' data-now='4661' data-quarter="Q2 2011" class="body__value body__value--4">35%</td>
+                    <td data-n='3' data-pct='32' data-start='13155' data-now='4236' data-quarter="Q3 2011" class="body__value body__value--3">32%</td>
+                    <td data-n='4' data-pct='30' data-start='13155' data-now='3919' data-quarter="Q4 2011" class="body__value body__value--3">30%</td>
+                    <td data-n='5' data-pct='28' data-start='13155' data-now='3661' data-quarter="Q5 2011" class="body__value body__value--3">28%</td>
+                    <td data-n='6' data-pct='26' data-start='13155' data-now='3415' data-quarter="Q6 2011" class="body__value body__value--3">26%</td>
+                    <td data-n='7' data-pct='24' data-start='13155' data-now='3205' data-quarter="Q7 2011" class="body__value body__value--2">24%</td>
+                    <td data-n='8' data-pct='23' data-start='13155' data-now='2992' data-quarter="Q8 2011" class="body__value body__value--2">23%</td>
+                    <td data-n='9' data-pct='21' data-start='13155' data-now='2811' data-quarter="Q9 2011" class="body__value body__value--2">21%</td>
+                    <td data-n='10' data-pct='20' data-start='13155' data-now='2619' data-quarter="Q10 2011" class="body__value body__value--2">20%</td>
+                    <td data-n='11' data-pct='18' data-start='13155' data-now='2410' data-quarter="Q11 2011" class="body__value body__value--2">18%</td>
+                    <td data-n='12' data-pct='17' data-start='13155' data-now='2226' data-quarter="Q12 2011" class="body__value body__value--2">17%</td>
+                    <td data-n='13' data-pct='15' data-start='13155' data-now='1988' data-quarter="Q13 2011" class="body__value body__value--2">15%</td>
+                    <td data-n='14' data-pct='13' data-start='13155' data-now='1752' data-quarter="Q14 2011" class="body__value body__value--1">13%</td>
+                    <td data-n='15' data-pct='11' data-start='13155' data-now='1425' data-quarter="Q15 2011" class="body__value body__value--1">11%</td>
+                    <td data-n='16' data-pct='5' data-start='13155' data-now='714' data-quarter="Q16 2011" class="body__value body__value--1">5%</td>
+                  </tr>
+                  <tr>
+                    <td class="body__quarter">Q3
+                    </td>
+                    <td class="body__people">17351</td>
+                    <td data-n='1' data-pct='36' data-start='17351' data-now='6279' data-quarter="Q1 2011" class="body__value body__value--4">36%</td>
+                    <td data-n='2' data-pct='28' data-start='17351' data-now='4828' data-quarter="Q2 2011" class="body__value body__value--3">28%</td>
+                    <td data-n='3' data-pct='25' data-start='17351' data-now='4365' data-quarter="Q3 2011" class="body__value body__value--3">25%</td>
+                    <td data-n='4' data-pct='23' data-start='17351' data-now='3926' data-quarter="Q4 2011" class="body__value body__value--2">23%</td>
+                    <td data-n='5' data-pct='21' data-start='17351' data-now='3625' data-quarter="Q5 2011" class="body__value body__value--2">21%</td>
+                    <td data-n='6' data-pct='20' data-start='17351' data-now='3414' data-quarter="Q6 2011" class="body__value body__value--2">20%</td>
+                    <td data-n='7' data-pct='18' data-start='17351' data-now='3183' data-quarter="Q7 2011" class="body__value body__value--2">18%</td>
+                    <td data-n='8' data-pct='17' data-start='17351' data-now='2954' data-quarter="Q8 2011" class="body__value body__value--2">17%</td>
+                    <td data-n='9' data-pct='16' data-start='17351' data-now='2768' data-quarter="Q9 2011" class="body__value body__value--2">16%</td>
+                    <td data-n='10' data-pct='15' data-start='17351' data-now='2559' data-quarter="Q10 2011" class="body__value body__value--2">15%</td>
+                    <td data-n='11' data-pct='13' data-start='17351' data-now='2335' data-quarter="Q11 2011" class="body__value body__value--1">13%</td>
+                    <td data-n='12' data-pct='12' data-start='17351' data-now='2089' data-quarter="Q12 2011" class="body__value body__value--1">12%</td>
+                    <td data-n='13' data-pct='11' data-start='17351' data-now='1828' data-quarter="Q13 2011" class="body__value body__value--1">11%</td>
+                    <td data-n='14' data-pct='9' data-start='17351' data-now='1485' data-quarter="Q14 2011" class="body__value body__value--1">9%</td>
+                    <td data-n='15' data-pct='4' data-start='17351' data-now='716' data-quarter="Q15 2011" class="body__value body__value--0">4%</td>
+                  </tr>
+                  <tr>
+                    <td class="body__quarter">Q4
+                    </td>
+                    <td class="body__people">16343</td>
+                    <td data-n='1' data-pct='33' data-start='16343' data-now='5453' data-quarter="Q1 2011" class="body__value body__value--3">33%</td>
+                    <td data-n='2' data-pct='28' data-start='16343' data-now='4570' data-quarter="Q2 2011" class="body__value body__value--3">28%</td>
+                    <td data-n='3' data-pct='25' data-start='16343' data-now='4043' data-quarter="Q3 2011" class="body__value body__value--3">25%</td>
+                    <td data-n='4' data-pct='22' data-start='16343' data-now='3646' data-quarter="Q4 2011" class="body__value body__value--2">22%</td>
+                    <td data-n='5' data-pct='21' data-start='16343' data-now='3410' data-quarter="Q5 2011" class="body__value body__value--2">21%</td>
+                    <td data-n='6' data-pct='19' data-start='16343' data-now='3159' data-quarter="Q6 2011" class="body__value body__value--2">19%</td>
+                    <td data-n='7' data-pct='18' data-start='16343' data-now='2915' data-quarter="Q7 2011" class="body__value body__value--2">18%</td>
+                    <td data-n='8' data-pct='16' data-start='16343' data-now='2679' data-quarter="Q8 2011" class="body__value body__value--2">16%</td>
+                    <td data-n='9' data-pct='15' data-start='16343' data-now='2448' data-quarter="Q9 2011" class="body__value body__value--2">15%</td>
+                    <td data-n='10' data-pct='14' data-start='16343' data-now='2235' data-quarter="Q10 2011" class="body__value body__value--1">14%</td>
+                    <td data-n='11' data-pct='12' data-start='16343' data-now='2002' data-quarter="Q11 2011" class="body__value body__value--1">12%</td>
+                    <td data-n='12' data-pct='11' data-start='16343' data-now='1743' data-quarter="Q12 2011" class="body__value body__value--1">11%</td>
+                    <td data-n='13' data-pct='9' data-start='16343' data-now='1408' data-quarter="Q13 2011" class="body__value body__value--1">9%</td>
+                    <td data-n='14' data-pct='4' data-start='16343' data-now='667' data-quarter="Q14 2011" class="body__value body__value--0">4%</td>
+                  </tr>
+                  <tr>
+                    <td rowspan="4" class="body__year">2012</td>
+                    <td class="body__quarter">Q1
+                    </td>
+                    <td class="body__people">15949</td>
+                    <td data-n='1' data-pct='38' data-start='15949' data-now='6116' data-quarter="Q1 2012" class="body__value body__value--4">38%</td>
+                    <td data-n='2' data-pct='32' data-start='15949' data-now='5054' data-quarter="Q2 2012" class="body__value body__value--3">32%</td>
+                    <td data-n='3' data-pct='28' data-start='15949' data-now='4529' data-quarter="Q3 2012" class="body__value body__value--3">28%</td>
+                    <td data-n='4' data-pct='26' data-start='15949' data-now='4162' data-quarter="Q4 2012" class="body__value body__value--3">26%</td>
+                    <td data-n='5' data-pct='24' data-start='15949' data-now='3829' data-quarter="Q5 2012" class="body__value body__value--2">24%</td>
+                    <td data-n='6' data-pct='22' data-start='15949' data-now='3540' data-quarter="Q6 2012" class="body__value body__value--2">22%</td>
+                    <td data-n='7' data-pct='21' data-start='15949' data-now='3282' data-quarter="Q7 2012" class="body__value body__value--2">21%</td>
+                    <td data-n='8' data-pct='19' data-start='15949' data-now='3007' data-quarter="Q8 2012" class="body__value body__value--2">19%</td>
+                    <td data-n='9' data-pct='17' data-start='15949' data-now='2748' data-quarter="Q9 2012" class="body__value body__value--2">17%</td>
+                    <td data-n='10' data-pct='15' data-start='15949' data-now='2460' data-quarter="Q10 2012" class="body__value body__value--2">15%</td>
+                    <td data-n='11' data-pct='14' data-start='15949' data-now='2156' data-quarter="Q11 2012" class="body__value body__value--1">14%</td>
+                    <td data-n='12' data-pct='11' data-start='15949' data-now='1757' data-quarter="Q12 2012" class="body__value body__value--1">11%</td>
+                    <td data-n='13' data-pct='5' data-start='15949' data-now='842' data-quarter="Q13 2012" class="body__value body__value--1">5%</td>
+                  </tr>
+                  <tr>
+                    <td class="body__quarter">Q2
+                    </td>
+                    <td class="body__people">16466</td>
+                    <td data-n='1' data-pct='39' data-start='16466' data-now='6390' data-quarter="Q1 2012" class="body__value body__value--4">39%</td>
+                    <td data-n='2' data-pct='32' data-start='16466' data-now='5340' data-quarter="Q2 2012" class="body__value body__value--3">32%</td>
+                    <td data-n='3' data-pct='30' data-start='16466' data-now='4866' data-quarter="Q3 2012" class="body__value body__value--3">30%</td>
+                    <td data-n='4' data-pct='27' data-start='16466' data-now='4432' data-quarter="Q4 2012" class="body__value body__value--3">27%</td>
+                    <td data-n='5' data-pct='25' data-start='16466' data-now='4076' data-quarter="Q5 2012" class="body__value body__value--3">25%</td>
+                    <td data-n='6' data-pct='23' data-start='16466' data-now='3764' data-quarter="Q6 2012" class="body__value body__value--2">23%</td>
+                    <td data-n='7' data-pct='21' data-start='16466' data-now='3478' data-quarter="Q7 2012" class="body__value body__value--2">21%</td>
+                    <td data-n='8' data-pct='19' data-start='16466' data-now='3165' data-quarter="Q8 2012" class="body__value body__value--2">19%</td>
+                    <td data-n='9' data-pct='17' data-start='16466' data-now='2818' data-quarter="Q9 2012" class="body__value body__value--2">17%</td>
+                    <td data-n='10' data-pct='15' data-start='16466' data-now='2436' data-quarter="Q10 2012" class="body__value body__value--2">15%</td>
+                    <td data-n='11' data-pct='12' data-start='16466' data-now='1953' data-quarter="Q11 2012" class="body__value body__value--1">12%</td>
+                    <td data-n='12' data-pct='6' data-start='16466' data-now='959' data-quarter="Q12 2012" class="body__value body__value--1">6%</td>
+                  </tr>
+                  <tr>
+                    <td class="body__quarter">Q3
+                    </td>
+                    <td class="body__people">13577</td>
+                    <td data-n='1' data-pct='41' data-start='13577' data-now='5525' data-quarter="Q1 2012" class="body__value body__value--4">41%</td>
+                    <td data-n='2' data-pct='35' data-start='13577' data-now='4809' data-quarter="Q2 2012" class="body__value body__value--4">35%</td>
+                    <td data-n='3' data-pct='32' data-start='13577' data-now='4333' data-quarter="Q3 2012" class="body__value body__value--3">32%</td>
+                    <td data-n='4' data-pct='29' data-start='13577' data-now='3945' data-quarter="Q4 2012" class="body__value body__value--3">29%</td>
+                    <td data-n='5' data-pct='27' data-start='13577' data-now='3602' data-quarter="Q5 2012" class="body__value body__value--3">27%</td>
+                    <td data-n='6' data-pct='24' data-start='13577' data-now='3270' data-quarter="Q6 2012" class="body__value body__value--2">24%</td>
+                    <td data-n='7' data-pct='22' data-start='13577' data-now='2974' data-quarter="Q7 2012" class="body__value body__value--2">22%</td>
+                    <td data-n='8' data-pct='20' data-start='13577' data-now='2651' data-quarter="Q8 2012" class="body__value body__value--2">20%</td>
+                    <td data-n='9' data-pct='17' data-start='13577' data-now='2305' data-quarter="Q9 2012" class="body__value body__value--2">17%</td>
+                    <td data-n='10' data-pct='14' data-start='13577' data-now='1874' data-quarter="Q10 2012" class="body__value body__value--1">14%</td>
+                    <td data-n='11' data-pct='7' data-start='13577' data-now='929' data-quarter="Q11 2012" class="body__value body__value--1">7%</td>
+                  </tr>
+                  <tr>
+                    <td class="body__quarter">Q4
+                    </td>
+                    <td class="body__people">13007</td>
+                    <td data-n='1' data-pct='44' data-start='13007' data-now='5710' data-quarter="Q1 2012" class="body__value body__value--4">44%</td>
+                    <td data-n='2' data-pct='37' data-start='13007' data-now='4850' data-quarter="Q2 2012" class="body__value body__value--4">37%</td>
+                    <td data-n='3' data-pct='33' data-start='13007' data-now='4342' data-quarter="Q3 2012" class="body__value body__value--3">33%</td>
+                    <td data-n='4' data-pct='30' data-start='13007' data-now='3963' data-quarter="Q4 2012" class="body__value body__value--3">30%</td>
+                    <td data-n='5' data-pct='27' data-start='13007' data-now='3547' data-quarter="Q5 2012" class="body__value body__value--3">27%</td>
+                    <td data-n='6' data-pct='24' data-start='13007' data-now='3175' data-quarter="Q6 2012" class="body__value body__value--2">24%</td>
+                    <td data-n='7' data-pct='22' data-start='13007' data-now='2800' data-quarter="Q7 2012" class="body__value body__value--2">22%</td>
+                    <td data-n='8' data-pct='18' data-start='13007' data-now='2393' data-quarter="Q8 2012" class="body__value body__value--2">18%</td>
+                    <td data-n='9' data-pct='15' data-start='13007' data-now='1900' data-quarter="Q9 2012" class="body__value body__value--2">15%</td>
+                    <td data-n='10' data-pct='7' data-start='13007' data-now='890' data-quarter="Q10 2012" class="body__value body__value--1">7%</td>
+                  </tr>
+                  <tr>
+                    <td rowspan="4" class="body__year">2013</td>
+                    <td class="body__quarter">Q1
+                    </td>
+                    <td class="body__people">14968</td>
+                    <td data-n='1' data-pct='43' data-start='14968' data-now='6449' data-quarter="Q1 2013" class="body__value body__value--4">43%</td>
+                    <td data-n='2' data-pct='37' data-start='14968' data-now='5476' data-quarter="Q2 2013" class="body__value body__value--4">37%</td>
+                    <td data-n='3' data-pct='33' data-start='14968' data-now='4922' data-quarter="Q3 2013" class="body__value body__value--3">33%</td>
+                    <td data-n='4' data-pct='29' data-start='14968' data-now='4342' data-quarter="Q4 2013" class="body__value body__value--3">29%</td>
+                    <td data-n='5' data-pct='26' data-start='14968' data-now='3875' data-quarter="Q5 2013" class="body__value body__value--3">26%</td>
+                    <td data-n='6' data-pct='23' data-start='14968' data-now='3407' data-quarter="Q6 2013" class="body__value body__value--2">23%</td>
+                    <td data-n='7' data-pct='19' data-start='14968' data-now='2892' data-quarter="Q7 2013" class="body__value body__value--2">19%</td>
+                    <td data-n='8' data-pct='15' data-start='14968' data-now='2284' data-quarter="Q8 2013" class="body__value body__value--2">15%</td>
+                    <td data-n='9' data-pct='7' data-start='14968' data-now='1080' data-quarter="Q9 2013" class="body__value body__value--1">7%</td>
+                  </tr>
+                  <tr>
+                    <td class="body__quarter">Q2
+                    </td>
+                    <td class="body__people">14222</td>
+                    <td data-n='1' data-pct='41' data-start='14222' data-now='5804' data-quarter="Q1 2013" class="body__value body__value--4">41%</td>
+                    <td data-n='2' data-pct='34' data-start='14222' data-now='4884' data-quarter="Q2 2013" class="body__value body__value--3">34%</td>
+                    <td data-n='3' data-pct='29' data-start='14222' data-now='4190' data-quarter="Q3 2013" class="body__value body__value--3">29%</td>
+                    <td data-n='4' data-pct='26' data-start='14222' data-now='3719' data-quarter="Q4 2013" class="body__value body__value--3">26%</td>
+                    <td data-n='5' data-pct='23' data-start='14222' data-now='3256' data-quarter="Q5 2013" class="body__value body__value--2">23%</td>
+                    <td data-n='6' data-pct='19' data-start='14222' data-now='2756' data-quarter="Q6 2013" class="body__value body__value--2">19%</td>
+                    <td data-n='7' data-pct='15' data-start='14222' data-now='2166' data-quarter="Q7 2013" class="body__value body__value--2">15%</td>
+                    <td data-n='8' data-pct='7' data-start='14222' data-now='1037' data-quarter="Q8 2013" class="body__value body__value--1">7%</td>
+                  </tr>
+                  <tr>
+                    <td class="body__quarter">Q3
+                    </td>
+                    <td class="body__people">13457</td>
+                    <td data-n='1' data-pct='39' data-start='13457' data-now='5215' data-quarter="Q1 2013" class="body__value body__value--4">39%</td>
+                    <td data-n='2' data-pct='32' data-start='13457' data-now='4265' data-quarter="Q2 2013" class="body__value body__value--3">32%</td>
+                    <td data-n='3' data-pct='28' data-start='13457' data-now='3709' data-quarter="Q3 2013" class="body__value body__value--3">28%</td>
+                    <td data-n='4' data-pct='24' data-start='13457' data-now='3218' data-quarter="Q4 2013" class="body__value body__value--2">24%</td>
+                    <td data-n='5' data-pct='20' data-start='13457' data-now='2688' data-quarter="Q5 2013" class="body__value body__value--2">20%</td>
+                    <td data-n='6' data-pct='16' data-start='13457' data-now='2096' data-quarter="Q6 2013" class="body__value body__value--2">16%</td>
+                    <td data-n='7' data-pct='7' data-start='13457' data-now='970' data-quarter="Q7 2013" class="body__value body__value--1">7%</td>
+                  </tr>
+                  <tr>
+                    <td class="body__quarter">Q4
+                    </td>
+                    <td class="body__people">14053</td>
+                    <td data-n='1' data-pct='37' data-start='14053' data-now='5235' data-quarter="Q1 2013" class="body__value body__value--4">37%</td>
+                    <td data-n='2' data-pct='31' data-start='14053' data-now='4303' data-quarter="Q2 2013" class="body__value body__value--3">31%</td>
+                    <td data-n='3' data-pct='26' data-start='14053' data-now='3655' data-quarter="Q3 2013" class="body__value body__value--3">26%</td>
+                    <td data-n='4' data-pct='22' data-start='14053' data-now='3030' data-quarter="Q4 2013" class="body__value body__value--2">22%</td>
+                    <td data-n='5' data-pct='16' data-start='14053' data-now='2298' data-quarter="Q5 2013" class="body__value body__value--2">16%</td>
+                    <td data-n='6' data-pct='7' data-start='14053' data-now='1034' data-quarter="Q6 2013" class="body__value body__value--1">7%</td>
+                  </tr>
+                  <tr>
+                    <td rowspan="4" class="body__year">2014</td>
+                    <td class="body__quarter">Q1
+                    </td>
+                    <td class="body__people">12442</td>
+                    <td data-n='1' data-pct='39' data-start='12442' data-now='4869' data-quarter="Q1 2014" class="body__value body__value--4">39%</td>
+                    <td data-n='2' data-pct='31' data-start='12442' data-now='3818' data-quarter="Q2 2014" class="body__value body__value--3">31%</td>
+                    <td data-n='3' data-pct='25' data-start='12442' data-now='3115' data-quarter="Q3 2014" class="body__value body__value--3">25%</td>
+                    <td data-n='4' data-pct='19' data-start='12442' data-now='2322' data-quarter="Q4 2014" class="body__value body__value--2">19%</td>
+                    <td data-n='5' data-pct='8' data-start='12442' data-now='1027' data-quarter="Q5 2014" class="body__value body__value--1">8%</td>
+                  </tr>
+                  <tr>
+                    <td class="body__quarter">Q2
+                    </td>
+                    <td class="body__people">11680</td>
+                    <td data-n='1' data-pct='35' data-start='11680' data-now='4129' data-quarter="Q1 2014" class="body__value body__value--4">35%</td>
+                    <td data-n='2' data-pct='27' data-start='11680' data-now='3113' data-quarter="Q2 2014" class="body__value body__value--3">27%</td>
+                    <td data-n='3' data-pct='20' data-start='11680' data-now='2304' data-quarter="Q3 2014" class="body__value body__value--2">20%</td>
+                    <td data-n='4' data-pct='8' data-start='11680' data-now='989' data-quarter="Q4 2014" class="body__value body__value--1">8%</td>
+                  </tr>
+                  <tr>
+                    <td class="body__quarter">Q3
+                    </td>
+                    <td class="body__people">12602</td>
+                    <td data-n='1' data-pct='29' data-start='12602' data-now='3662' data-quarter="Q1 2014" class="body__value body__value--3">29%</td>
+                    <td data-n='2' data-pct='19' data-start='12602' data-now='2436' data-quarter="Q2 2014" class="body__value body__value--2">19%</td>
+                    <td data-n='3' data-pct='8' data-start='12602' data-now='1022' data-quarter="Q3 2014" class="body__value body__value--1">8%</td>
+                  </tr>
+                  <tr>
+                    <td class="body__quarter">Q4
+                    </td>
+                    <td class="body__people">13491</td>
+                    <td data-n='1' data-pct='13' data-start='13491' data-now='1756' data-quarter="Q1 2014" class="body__value body__value--1">13%</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="page__controllers--previous">
+            <div class="previous"><a><span class="glyphicon glyphicon-chevron-left"></span></a></div>
+          </div>
+          <div class="page__controllers--next">
+            <div class="next"><a><span class="glyphicon glyphicon-chevron-right"></span></a></div>
+          </div>
+        </div>
+      </div>
+      <div id="p4" class="page active">
+        <div id="topics" class="topics">
+          <div class="container">
+            <div class="topics__title title">
+              <div class="title__caption">
+                <h1>What do people talk about on HN?</h1>
+              </div>
+            </div>
+            <div class="topics__content content">
+              <div class="content__legend">
+                <p>WORD OCCURENCES IN STORIES TITLES BETWEEN Q1 2012 AND Q1 2015</p>
+                <ul class="legend__tab tab">
+                  <li data-category="all" class="tab__item active">All</li>
+                  <li data-category="techno" class="tab__item">Technology</li>
+                  <li data-category="lang" class="tab__item">Languages</li>
+                  <li data-category="corp" class="tab__item">Companies</li>
+                  <li data-category="security" class="tab__item">Security</li>
+                  <li data-category="people" class="tab__item">People</li>
+                </ul>
+              </div>
+              <div id="g-chart">
+                <svg class="g-nodes"></svg>
+                <div class="g-labels"></div>
+              </div>
+              <div id="chart-container">
+                <div class="chart"><i class="chart--close fa fa-lg fa-close"></i>
+                  <p>Word occurences in stories quarter per quarter</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="page__controllers--previous">
+            <div class="previous"><a><span class="glyphicon glyphicon-chevron-left"></span></a></div>
+          </div>
+          <div class="page__controllers--next">
+            <div class="next"><a><span class="glyphicon glyphicon-chevron-right"></span></a></div>
+          </div>
+        </div>
+      </div>
+      <div id="p5" class="page active">
+        <div id="sources" class="sources">
+          <div class="container">
+            <div class="sources__title title">
+              <div class="title__caption">
+                <h1>HN sources</h1>
+              </div>
+            </div>
+            <div class="sources__content content">
+              <div class="content__legend">
+                <p>MOST UPVOTED DOMAINS PER YEAR</p>
+              </div>
+              <div class="tab">
+                <ul class="tab__header">
+                  <li class="tab__control">2007</li>
+                  <li class="tab__control">2008</li>
+                  <li class="tab__control">2009</li>
+                  <li class="tab__control">2010</li>
+                  <li class="tab__control">2011</li>
+                  <li class="tab__control">2012</li>
+                  <li class="tab__control">2013</li>
+                  <li class="tab__control">2014</li>
+                  <li class="tab__control active">2015</li>
+                </ul>
+                <ul data-index='0' class="tab__content hidden">
+                  <li class="tab__item">
+                    <div class="post"><a href="https://hn.algolia.com/?query=paulgraham.com&amp;sort=byPopularity&amp;prefix=false&amp;page=0&amp;dateRange=custom&amp;type=story&amp;dateStart=1167609600&amp;dateEnd=1199145600" target="_blank"><span class="post__score">1</span><span class="post__content"><span class="post__graph post__graph--bg-28"></span><span class="post__title">
+                            <h3>paulgraham.com</h3></span><span class="post__info"><small><em>1510</em> total points |&nbsp;<em>53</em> posts | &nbsp;<em>28.4906</em>&nbsp; avg points per post</small></span></span></a></div>
+                  </li>
+                  <li class="tab__item">
+                    <div class="post"><a href="https://hn.algolia.com/?query=blog.pmarca.com&amp;sort=byPopularity&amp;prefix=false&amp;page=0&amp;dateRange=custom&amp;type=story&amp;dateStart=1167609600&amp;dateEnd=1199145600" target="_blank"><span class="post__score">2</span><span class="post__content"><span class="post__graph post__graph--bg-17"></span><span class="post__title">
+                            <h3>blog.pmarca.com</h3></span><span class="post__info"><small><em>953</em> total points |&nbsp;<em>57</em> posts | &nbsp;<em>16.7193</em>&nbsp; avg points per post</small></span></span></a></div>
+                  </li>
+                  <li class="tab__item">
+                    <div class="post"><a href="https://hn.algolia.com/?query=blog.guykawasaki.com&amp;sort=byPopularity&amp;prefix=false&amp;page=0&amp;dateRange=custom&amp;type=story&amp;dateStart=1167609600&amp;dateEnd=1199145600" target="_blank"><span class="post__score">3</span><span class="post__content"><span class="post__graph post__graph--bg-9"></span><span class="post__title">
+                            <h3>blog.guykawasaki.com</h3></span><span class="post__info"><small><em>501</em> total points |&nbsp;<em>53</em> posts | &nbsp;<em>9.45283</em>&nbsp; avg points per post</small></span></span></a></div>
+                  </li>
+                  <li class="tab__item">
+                    <div class="post"><a href="https://hn.algolia.com/?query=codinghorror.com&amp;sort=byPopularity&amp;prefix=false&amp;page=0&amp;dateRange=custom&amp;type=story&amp;dateStart=1167609600&amp;dateEnd=1199145600" target="_blank"><span class="post__score">4</span><span class="post__content"><span class="post__graph post__graph--bg-8"></span><span class="post__title">
+                            <h3>codinghorror.com</h3></span><span class="post__info"><small><em>454</em> total points |&nbsp;<em>59</em> posts | &nbsp;<em>7.69492</em>&nbsp; avg points per post</small></span></span></a></div>
+                  </li>
+                  <li class="tab__item">
+                    <div class="post"><a href="https://hn.algolia.com/?query=nytimes.com&amp;sort=byPopularity&amp;prefix=false&amp;page=0&amp;dateRange=custom&amp;type=story&amp;dateStart=1167609600&amp;dateEnd=1199145600" target="_blank"><span class="post__score">5</span><span class="post__content"><span class="post__graph post__graph--bg-6"></span><span class="post__title">
+                            <h3>nytimes.com</h3></span><span class="post__info"><small><em>1769</em> total points |&nbsp;<em>286</em> posts | &nbsp;<em>6.18531</em>&nbsp; avg points per post</small></span></span></a></div>
+                  </li>
+                  <li class="tab__item">
+                    <div class="post"><a href="https://hn.algolia.com/?query=37signals.com&amp;sort=byPopularity&amp;prefix=false&amp;page=0&amp;dateRange=custom&amp;type=story&amp;dateStart=1167609600&amp;dateEnd=1199145600" target="_blank"><span class="post__score">6</span><span class="post__content"><span class="post__graph post__graph--bg-6"></span><span class="post__title">
+                            <h3>37signals.com</h3></span><span class="post__info"><small><em>381</em> total points |&nbsp;<em>69</em> posts | &nbsp;<em>5.52174</em>&nbsp; avg points per post</small></span></span></a></div>
+                  </li>
+                  <li class="tab__item">
+                    <div class="post"><a href="https://hn.algolia.com/?query=news.bbc.co.uk&amp;sort=byPopularity&amp;prefix=false&amp;page=0&amp;dateRange=custom&amp;type=story&amp;dateStart=1167609600&amp;dateEnd=1199145600" target="_blank"><span class="post__score">7</span><span class="post__content"><span class="post__graph post__graph--bg-5"></span><span class="post__title">
+                            <h3>news.bbc.co.uk</h3></span><span class="post__info"><small><em>432</em> total points |&nbsp;<em>84</em> posts | &nbsp;<em>5.14286</em>&nbsp; avg points per post</small></span></span></a></div>
+                  </li>
+                  <li class="tab__item">
+                    <div class="post"><a href="https://hn.algolia.com/?query=venturebeat.com&amp;sort=byPopularity&amp;prefix=false&amp;page=0&amp;dateRange=custom&amp;type=story&amp;dateStart=1167609600&amp;dateEnd=1199145600" target="_blank"><span class="post__score">8</span><span class="post__content"><span class="post__graph post__graph--bg-5"></span><span class="post__title">
+                            <h3>venturebeat.com</h3></span><span class="post__info"><small><em>699</em> total points |&nbsp;<em>140</em> posts | &nbsp;<em>4.99286</em>&nbsp; avg points per post</small></span></span></a></div>
+                  </li>
+                  <li class="tab__item">
+                    <div class="post"><a href="https://hn.algolia.com/?query=youtube.com&amp;sort=byPopularity&amp;prefix=false&amp;page=0&amp;dateRange=custom&amp;type=story&amp;dateStart=1167609600&amp;dateEnd=1199145600" target="_blank"><span class="post__score">9</span><span class="post__content"><span class="post__graph post__graph--bg-5"></span><span class="post__title">
+                            <h3>youtube.com</h3></span><span class="post__info"><small><em>395</em> total points |&nbsp;<em>81</em> posts | &nbsp;<em>4.87654</em>&nbsp; avg points per post</small></span></span></a></div>
+                  </li>
+                  <li class="tab__item">
+                    <div class="post"><a href="https://hn.algolia.com/?query=techcrunch.com&amp;sort=byPopularity&amp;prefix=false&amp;page=0&amp;dateRange=custom&amp;type=story&amp;dateStart=1167609600&amp;dateEnd=1199145600" target="_blank"><span class="post__score">10</span><span class="post__content"><span class="post__graph post__graph--bg-5"></span><span class="post__title">
+                            <h3>techcrunch.com</h3></span><span class="post__info"><small><em>3074</em> total points |&nbsp;<em>641</em> posts | &nbsp;<em>4.79563</em>&nbsp; avg points per post</small></span></span></a></div>
+                  </li>
+                </ul>
+                <ul data-index='1' class="tab__content hidden">
+                  <li class="tab__item">
+                    <div class="post"><a href="https://hn.algolia.com/?query=paulgraham.com&amp;sort=byPopularity&amp;prefix=false&amp;page=0&amp;dateRange=custom&amp;type=story&amp;dateStart=1199145600&amp;dateEnd=1230681600" target="_blank"><span class="post__score">1</span><span class="post__content"><span class="post__graph post__graph--bg-59"></span><span class="post__title">
+                            <h3>paulgraham.com</h3></span><span class="post__info"><small><em>3959</em> total points |&nbsp;<em>67</em> posts | &nbsp;<em>59.0896</em>&nbsp; avg points per post</small></span></span></a></div>
+                  </li>
+                  <li class="tab__item">
+                    <div class="post"><a href="https://hn.algolia.com/?query=mattmaroon.com&amp;sort=byPopularity&amp;prefix=false&amp;page=0&amp;dateRange=custom&amp;type=story&amp;dateStart=1199145600&amp;dateEnd=1230681600" target="_blank"><span class="post__score">2</span><span class="post__content"><span class="post__graph post__graph--bg-30"></span><span class="post__title">
+                            <h3>mattmaroon.com</h3></span><span class="post__info"><small><em>1751</em> total points |&nbsp;<em>58</em> posts | &nbsp;<em>30.1897</em>&nbsp; avg points per post</small></span></span></a></div>
+                  </li>
+                  <li class="tab__item">
+                    <div class="post"><a href="https://hn.algolia.com/?query=catonmat.net&amp;sort=byPopularity&amp;prefix=false&amp;page=0&amp;dateRange=custom&amp;type=story&amp;dateStart=1199145600&amp;dateEnd=1230681600" target="_blank"><span class="post__score">3</span><span class="post__content"><span class="post__graph post__graph--bg-22"></span><span class="post__title">
+                            <h3>catonmat.net</h3></span><span class="post__info"><small><em>1307</em> total points |&nbsp;<em>59</em> posts | &nbsp;<em>22.1525</em>&nbsp; avg points per post</small></span></span></a></div>
+                  </li>
+                  <li class="tab__item">
+                    <div class="post"><a href="https://hn.algolia.com/?query=weblog.raganwald.com&amp;sort=byPopularity&amp;prefix=false&amp;page=0&amp;dateRange=custom&amp;type=story&amp;dateStart=1199145600&amp;dateEnd=1230681600" target="_blank"><span class="post__score">4</span><span class="post__content"><span class="post__graph post__graph--bg-18"></span><span class="post__title">
+                            <h3>weblog.raganwald.com</h3></span><span class="post__info"><small><em>1034</em> total points |&nbsp;<em>57</em> posts | &nbsp;<em>18.1404</em>&nbsp; avg points per post</small></span></span></a></div>
+                  </li>
+                  <li class="tab__item">
+                    <div class="post"><a href="https://hn.algolia.com/?query=codinghorror.com&amp;sort=byPopularity&amp;prefix=false&amp;page=0&amp;dateRange=custom&amp;type=story&amp;dateStart=1199145600&amp;dateEnd=1230681600" target="_blank"><span class="post__score">5</span><span class="post__content"><span class="post__graph post__graph--bg-18"></span><span class="post__title">
+                            <h3>codinghorror.com</h3></span><span class="post__info"><small><em>2549</em> total points |&nbsp;<em>142</em> posts | &nbsp;<em>17.9507</em>&nbsp; avg points per post</small></span></span></a></div>
+                  </li>
+                  <li class="tab__item">
+                    <div class="post"><a href="https://hn.algolia.com/?query=37signals.com&amp;sort=byPopularity&amp;prefix=false&amp;page=0&amp;dateRange=custom&amp;type=story&amp;dateStart=1199145600&amp;dateEnd=1230681600" target="_blank"><span class="post__score">6</span><span class="post__content"><span class="post__graph post__graph--bg-17"></span><span class="post__title">
+                            <h3>37signals.com</h3></span><span class="post__info"><small><em>4282</em> total points |&nbsp;<em>256</em> posts | &nbsp;<em>16.7266</em>&nbsp; avg points per post</small></span></span></a></div>
+                  </li>
+                  <li class="tab__item">
+                    <div class="post"><a href="https://hn.algolia.com/?query=theatlantic.com&amp;sort=byPopularity&amp;prefix=false&amp;page=0&amp;dateRange=custom&amp;type=story&amp;dateStart=1199145600&amp;dateEnd=1230681600" target="_blank"><span class="post__score">7</span><span class="post__content"><span class="post__graph post__graph--bg-16"></span><span class="post__title">
+                            <h3>theatlantic.com</h3></span><span class="post__info"><small><em>872</em> total points |&nbsp;<em>54</em> posts | &nbsp;<em>16.1481</em>&nbsp; avg points per post</small></span></span></a></div>
+                  </li>
+                  <li class="tab__item">
+                    <div class="post"><a href="https://hn.algolia.com/?query=daringfireball.net&amp;sort=byPopularity&amp;prefix=false&amp;page=0&amp;dateRange=custom&amp;type=story&amp;dateStart=1199145600&amp;dateEnd=1230681600" target="_blank"><span class="post__score">8</span><span class="post__content"><span class="post__graph post__graph--bg-15"></span><span class="post__title">
+                            <h3>daringfireball.net</h3></span><span class="post__info"><small><em>849</em> total points |&nbsp;<em>56</em> posts | &nbsp;<em>15.1607</em>&nbsp; avg points per post</small></span></span></a></div>
+                  </li>
+                  <li class="tab__item">
+                    <div class="post"><a href="https://hn.algolia.com/?query=blogmaverick.com&amp;sort=byPopularity&amp;prefix=false&amp;page=0&amp;dateRange=custom&amp;type=story&amp;dateStart=1199145600&amp;dateEnd=1230681600" target="_blank"><span class="post__score">9</span><span class="post__content"><span class="post__graph post__graph--bg-14"></span><span class="post__title">
+                            <h3>blogmaverick.com</h3></span><span class="post__info"><small><em>947</em> total points |&nbsp;<em>66</em> posts | &nbsp;<em>14.3485</em>&nbsp; avg points per post</small></span></span></a></div>
+                  </li>
+                  <li class="tab__item">
+                    <div class="post"><a href="https://hn.algolia.com/?query=inc.com&amp;sort=byPopularity&amp;prefix=false&amp;page=0&amp;dateRange=custom&amp;type=story&amp;dateStart=1199145600&amp;dateEnd=1230681600" target="_blank"><span class="post__score">10</span><span class="post__content"><span class="post__graph post__graph--bg-14"></span><span class="post__title">
+                            <h3>inc.com</h3></span><span class="post__info"><small><em>747</em> total points |&nbsp;<em>54</em> posts | &nbsp;<em>13.8333</em>&nbsp; avg points per post</small></span></span></a></div>
+                  </li>
+                </ul>
+                <ul data-index='2' class="tab__content hidden">
+                  <li class="tab__item">
+                    <div class="post"><a href="https://hn.algolia.com/?query=inc.com&amp;sort=byPopularity&amp;prefix=false&amp;page=0&amp;dateRange=custom&amp;type=story&amp;dateStart=1230681600&amp;dateEnd=1262217600" target="_blank"><span class="post__score">1</span><span class="post__content"><span class="post__graph post__graph--bg-24"></span><span class="post__title">
+                            <h3>inc.com</h3></span><span class="post__info"><small><em>1586</em> total points |&nbsp;<em>66</em> posts | &nbsp;<em>24.0303</em>&nbsp; avg points per post</small></span></span></a></div>
+                  </li>
+                  <li class="tab__item">
+                    <div class="post"><a href="https://hn.algolia.com/?query=codinghorror.com&amp;sort=byPopularity&amp;prefix=false&amp;page=0&amp;dateRange=custom&amp;type=story&amp;dateStart=1230681600&amp;dateEnd=1262217600" target="_blank"><span class="post__score">2</span><span class="post__content"><span class="post__graph post__graph--bg-23"></span><span class="post__title">
+                            <h3>codinghorror.com</h3></span><span class="post__info"><small><em>1920</em> total points |&nbsp;<em>83</em> posts | &nbsp;<em>23.1325</em>&nbsp; avg points per post</small></span></span></a></div>
+                  </li>
+                  <li class="tab__item">
+                    <div class="post"><a href="https://hn.algolia.com/?query=github.com&amp;sort=byPopularity&amp;prefix=false&amp;page=0&amp;dateRange=custom&amp;type=story&amp;dateStart=1230681600&amp;dateEnd=1262217600" target="_blank"><span class="post__score">3</span><span class="post__content"><span class="post__graph post__graph--bg-23"></span><span class="post__title">
+                            <h3>github.com</h3></span><span class="post__info"><small><em>3119</em> total points |&nbsp;<em>135</em> posts | &nbsp;<em>23.1037</em>&nbsp; avg points per post</small></span></span></a></div>
+                  </li>
+                  <li class="tab__item">
+                    <div class="post"><a href="https://hn.algolia.com/?query=37signals.com&amp;sort=byPopularity&amp;prefix=false&amp;page=0&amp;dateRange=custom&amp;type=story&amp;dateStart=1230681600&amp;dateEnd=1262217600" target="_blank"><span class="post__score">4</span><span class="post__content"><span class="post__graph post__graph--bg-20"></span><span class="post__title">
+                            <h3>37signals.com</h3></span><span class="post__info"><small><em>2340</em> total points |&nbsp;<em>115</em> posts | &nbsp;<em>20.3478</em>&nbsp; avg points per post</small></span></span></a></div>
+                  </li>
+                  <li class="tab__item">
+                    <div class="post"><a href="https://hn.algolia.com/?query=torrentfreak.com&amp;sort=byPopularity&amp;prefix=false&amp;page=0&amp;dateRange=custom&amp;type=story&amp;dateStart=1230681600&amp;dateEnd=1262217600" target="_blank"><span class="post__score">5</span><span class="post__content"><span class="post__graph post__graph--bg-19"></span><span class="post__title">
+                            <h3>torrentfreak.com</h3></span><span class="post__info"><small><em>1290</em> total points |&nbsp;<em>68</em> posts | &nbsp;<em>18.9706</em>&nbsp; avg points per post</small></span></span></a></div>
+                  </li>
+                  <li class="tab__item">
+                    <div class="post"><a href="https://hn.algolia.com/?query=groups.google.com&amp;sort=byPopularity&amp;prefix=false&amp;page=0&amp;dateRange=custom&amp;type=story&amp;dateStart=1230681600&amp;dateEnd=1262217600" target="_blank"><span class="post__score">6</span><span class="post__content"><span class="post__graph post__graph--bg-18"></span><span class="post__title">
+                            <h3>groups.google.com</h3></span><span class="post__info"><small><em>1495</em> total points |&nbsp;<em>81</em> posts | &nbsp;<em>18.4568</em>&nbsp; avg points per post</small></span></span></a></div>
+                  </li>
+                  <li class="tab__item">
+                    <div class="post"><a href="https://hn.algolia.com/?query=newyorker.com&amp;sort=byPopularity&amp;prefix=false&amp;page=0&amp;dateRange=custom&amp;type=story&amp;dateStart=1230681600&amp;dateEnd=1262217600" target="_blank"><span class="post__score">7</span><span class="post__content"><span class="post__graph post__graph--bg-18"></span><span class="post__title">
+                            <h3>newyorker.com</h3></span><span class="post__info"><small><em>931</em> total points |&nbsp;<em>51</em> posts | &nbsp;<em>18.2549</em>&nbsp; avg points per post</small></span></span></a></div>
+                  </li>
+                  <li class="tab__item">
+                    <div class="post"><a href="https://hn.algolia.com/?query=code.google.com&amp;sort=byPopularity&amp;prefix=false&amp;page=0&amp;dateRange=custom&amp;type=story&amp;dateStart=1230681600&amp;dateEnd=1262217600" target="_blank"><span class="post__score">8</span><span class="post__content"><span class="post__graph post__graph--bg-15"></span><span class="post__title">
+                            <h3>code.google.com</h3></span><span class="post__info"><small><em>2123</em> total points |&nbsp;<em>139</em> posts | &nbsp;<em>15.2734</em>&nbsp; avg points per post</small></span></span></a></div>
+                  </li>
+                  <li class="tab__item">
+                    <div class="post"><a href="https://hn.algolia.com/?query=boston.com&amp;sort=byPopularity&amp;prefix=false&amp;page=0&amp;dateRange=custom&amp;type=story&amp;dateStart=1230681600&amp;dateEnd=1262217600" target="_blank"><span class="post__score">9</span><span class="post__content"><span class="post__graph post__graph--bg-14"></span><span class="post__title">
+                            <h3>boston.com</h3></span><span class="post__info"><small><em>1305</em> total points |&nbsp;<em>96</em> posts | &nbsp;<em>13.5938</em>&nbsp; avg points per post</small></span></span></a></div>
+                  </li>
+                  <li class="tab__item">
+                    <div class="post"><a href="https://hn.algolia.com/?query=wired.com&amp;sort=byPopularity&amp;prefix=false&amp;page=0&amp;dateRange=custom&amp;type=story&amp;dateStart=1230681600&amp;dateEnd=1262217600" target="_blank"><span class="post__score">10</span><span class="post__content"><span class="post__graph post__graph--bg-14"></span><span class="post__title">
+                            <h3>wired.com</h3></span><span class="post__info"><small><em>4334</em> total points |&nbsp;<em>320</em> posts | &nbsp;<em>13.5437</em>&nbsp; avg points per post</small></span></span></a></div>
+                  </li>
+                </ul>
+                <ul data-index='3' class="tab__content hidden">
+                  <li class="tab__item">
+                    <div class="post"><a href="https://hn.algolia.com/?query=sheddingbikes.com&amp;sort=byPopularity&amp;prefix=false&amp;page=0&amp;dateRange=custom&amp;type=story&amp;dateStart=1262217600&amp;dateEnd=1293753600" target="_blank"><span class="post__score">1</span><span class="post__content"><span class="post__graph post__graph--bg-84"></span><span class="post__title">
+                            <h3>sheddingbikes.com</h3></span><span class="post__info"><small><em>4799</em> total points |&nbsp;<em>57</em> posts | &nbsp;<em>84.193</em>&nbsp; avg points per post</small></span></span></a></div>
+                  </li>
+                  <li class="tab__item">
+                    <div class="post"><a href="https://hn.algolia.com/?query=paulgraham.com&amp;sort=byPopularity&amp;prefix=false&amp;page=0&amp;dateRange=custom&amp;type=story&amp;dateStart=1262217600&amp;dateEnd=1293753600" target="_blank"><span class="post__score">2</span><span class="post__content"><span class="post__graph post__graph--bg-78"></span><span class="post__title">
+                            <h3>paulgraham.com</h3></span><span class="post__info"><small><em>5905</em> total points |&nbsp;<em>76</em> posts | &nbsp;<em>77.6974</em>&nbsp; avg points per post</small></span></span></a></div>
+                  </li>
+                  <li class="tab__item">
+                    <div class="post"><a href="https://hn.algolia.com/?query=jacquesmattheij.com&amp;sort=byPopularity&amp;prefix=false&amp;page=0&amp;dateRange=custom&amp;type=story&amp;dateStart=1262217600&amp;dateEnd=1293753600" target="_blank"><span class="post__score">3</span><span class="post__content"><span class="post__graph post__graph--bg-54"></span><span class="post__title">
+                            <h3>jacquesmattheij.com</h3></span><span class="post__info"><small><em>3658</em> total points |&nbsp;<em>68</em> posts | &nbsp;<em>53.7941</em>&nbsp; avg points per post</small></span></span></a></div>
+                  </li>
+                  <li class="tab__item">
+                    <div class="post"><a href="https://hn.algolia.com/?query=gabrielweinberg.com&amp;sort=byPopularity&amp;prefix=false&amp;page=0&amp;dateRange=custom&amp;type=story&amp;dateStart=1262217600&amp;dateEnd=1293753600" target="_blank"><span class="post__score">4</span><span class="post__content"><span class="post__graph post__graph--bg-53"></span><span class="post__title">
+                            <h3>gabrielweinberg.com</h3></span><span class="post__info"><small><em>5597</em> total points |&nbsp;<em>105</em> posts | &nbsp;<em>53.3048</em>&nbsp; avg points per post</small></span></span></a></div>
+                  </li>
+                  <li class="tab__item">
+                    <div class="post"><a href="https://hn.algolia.com/?query=daringfireball.net&amp;sort=byPopularity&amp;prefix=false&amp;page=0&amp;dateRange=custom&amp;type=story&amp;dateStart=1262217600&amp;dateEnd=1293753600" target="_blank"><span class="post__score">5</span><span class="post__content"><span class="post__graph post__graph--bg-53"></span><span class="post__title">
+                            <h3>daringfireball.net</h3></span><span class="post__info"><small><em>7152</em> total points |&nbsp;<em>136</em> posts | &nbsp;<em>52.5882</em>&nbsp; avg points per post</small></span></span></a></div>
+                  </li>
+                  <li class="tab__item">
+                    <div class="post"><a href="https://hn.algolia.com/?query=blog.asmartbear.com&amp;sort=byPopularity&amp;prefix=false&amp;page=0&amp;dateRange=custom&amp;type=story&amp;dateStart=1262217600&amp;dateEnd=1293753600" target="_blank"><span class="post__score">6</span><span class="post__content"><span class="post__graph post__graph--bg-51"></span><span class="post__title">
+                            <h3>blog.asmartbear.com</h3></span><span class="post__info"><small><em>3291</em> total points |&nbsp;<em>64</em> posts | &nbsp;<em>51.4219</em>&nbsp; avg points per post</small></span></span></a></div>
+                  </li>
+                  <li class="tab__item">
+                    <div class="post"><a href="https://hn.algolia.com/?query=ryanwaggoner.com&amp;sort=byPopularity&amp;prefix=false&amp;page=0&amp;dateRange=custom&amp;type=story&amp;dateStart=1262217600&amp;dateEnd=1293753600" target="_blank"><span class="post__score">7</span><span class="post__content"><span class="post__graph post__graph--bg-51"></span><span class="post__title">
+                            <h3>ryanwaggoner.com</h3></span><span class="post__info"><small><em>3049</em> total points |&nbsp;<em>60</em> posts | &nbsp;<em>50.8167</em>&nbsp; avg points per post</small></span></span></a></div>
+                  </li>
+                  <li class="tab__item">
+                    <div class="post"><a href="https://hn.algolia.com/?query=apple.com&amp;sort=byPopularity&amp;prefix=false&amp;page=0&amp;dateRange=custom&amp;type=story&amp;dateStart=1262217600&amp;dateEnd=1293753600" target="_blank"><span class="post__score">8</span><span class="post__content"><span class="post__graph post__graph--bg-42"></span><span class="post__title">
+                            <h3>apple.com</h3></span><span class="post__info"><small><em>4435</em> total points |&nbsp;<em>106</em> posts | &nbsp;<em>41.8396</em>&nbsp; avg points per post</small></span></span></a></div>
+                  </li>
+                  <li class="tab__item">
+                    <div class="post"><a href="https://hn.algolia.com/?query=catonmat.net&amp;sort=byPopularity&amp;prefix=false&amp;page=0&amp;dateRange=custom&amp;type=story&amp;dateStart=1262217600&amp;dateEnd=1293753600" target="_blank"><span class="post__score">9</span><span class="post__content"><span class="post__graph post__graph--bg-40"></span><span class="post__title">
+                            <h3>catonmat.net</h3></span><span class="post__info"><small><em>2132</em> total points |&nbsp;<em>53</em> posts | &nbsp;<em>40.2264</em>&nbsp; avg points per post</small></span></span></a></div>
+                  </li>
+                  <li class="tab__item">
+                    <div class="post"><a href="https://hn.algolia.com/?query=codinghorror.com&amp;sort=byPopularity&amp;prefix=false&amp;page=0&amp;dateRange=custom&amp;type=story&amp;dateStart=1262217600&amp;dateEnd=1293753600" target="_blank"><span class="post__score">10</span><span class="post__content"><span class="post__graph post__graph--bg-38"></span><span class="post__title">
+                            <h3>codinghorror.com</h3></span><span class="post__info"><small><em>1990</em> total points |&nbsp;<em>52</em> posts | &nbsp;<em>38.2692</em>&nbsp; avg points per post</small></span></span></a></div>
+                  </li>
+                </ul>
+                <ul data-index='4' class="tab__content hidden">
+                  <li class="tab__item">
+                    <div class="post"><a href="https://hn.algolia.com/?query=jacquesmattheij.com&amp;sort=byPopularity&amp;prefix=false&amp;page=0&amp;dateRange=custom&amp;type=story&amp;dateStart=1293753600&amp;dateEnd=1325289600" target="_blank"><span class="post__score">1</span><span class="post__content"><span class="post__graph post__graph--bg-100"></span><span class="post__title">
+                            <h3>jacquesmattheij.com</h3></span><span class="post__info"><small><em>9129</em> total points |&nbsp;<em>90</em> posts | &nbsp;<em>101.433</em>&nbsp; avg points per post</small></span></span></a></div>
+                  </li>
+                  <li class="tab__item">
+                    <div class="post"><a href="https://hn.algolia.com/?query=paulgraham.com&amp;sort=byPopularity&amp;prefix=false&amp;page=0&amp;dateRange=custom&amp;type=story&amp;dateStart=1293753600&amp;dateEnd=1325289600" target="_blank"><span class="post__score">2</span><span class="post__content"><span class="post__graph post__graph--bg-66"></span><span class="post__title">
+                            <h3>paulgraham.com</h3></span><span class="post__info"><small><em>4721</em> total points |&nbsp;<em>71</em> posts | &nbsp;<em>66.493</em>&nbsp; avg points per post</small></span></span></a></div>
+                  </li>
+                  <li class="tab__item">
+                    <div class="post"><a href="https://hn.algolia.com/?query=gabrielweinberg.com&amp;sort=byPopularity&amp;prefix=false&amp;page=0&amp;dateRange=custom&amp;type=story&amp;dateStart=1293753600&amp;dateEnd=1325289600" target="_blank"><span class="post__score">3</span><span class="post__content"><span class="post__graph post__graph--bg-65"></span><span class="post__title">
+                            <h3>gabrielweinberg.com</h3></span><span class="post__info"><small><em>3517</em> total points |&nbsp;<em>54</em> posts | &nbsp;<em>65.1296</em>&nbsp; avg points per post</small></span></span></a></div>
+                  </li>
+                  <li class="tab__item">
+                    <div class="post"><a href="https://hn.algolia.com/?query=apple.com&amp;sort=byPopularity&amp;prefix=false&amp;page=0&amp;dateRange=custom&amp;type=story&amp;dateStart=1293753600&amp;dateEnd=1325289600" target="_blank"><span class="post__score">4</span><span class="post__content"><span class="post__graph post__graph--bg-63"></span><span class="post__title">
+                            <h3>apple.com</h3></span><span class="post__info"><small><em>7423</em> total points |&nbsp;<em>118</em> posts | &nbsp;<em>62.9068</em>&nbsp; avg points per post</small></span></span></a></div>
+                  </li>
+                  <li class="tab__item">
+                    <div class="post"><a href="https://hn.algolia.com/?query=blog.asmartbear.com&amp;sort=byPopularity&amp;prefix=false&amp;page=0&amp;dateRange=custom&amp;type=story&amp;dateStart=1293753600&amp;dateEnd=1325289600" target="_blank"><span class="post__score">5</span><span class="post__content"><span class="post__graph post__graph--bg-57"></span><span class="post__title">
+                            <h3>blog.asmartbear.com</h3></span><span class="post__info"><small><em>3290</em> total points |&nbsp;<em>58</em> posts | &nbsp;<em>56.7241</em>&nbsp; avg points per post</small></span></span></a></div>
+                  </li>
+                  <li class="tab__item">
+                    <div class="post"><a href="https://hn.algolia.com/?query=codinghorror.com&amp;sort=byPopularity&amp;prefix=false&amp;page=0&amp;dateRange=custom&amp;type=story&amp;dateStart=1293753600&amp;dateEnd=1325289600" target="_blank"><span class="post__score">6</span><span class="post__content"><span class="post__graph post__graph--bg-55"></span><span class="post__title">
+                            <h3>codinghorror.com</h3></span><span class="post__info"><small><em>4092</em> total points |&nbsp;<em>74</em> posts | &nbsp;<em>55.2973</em>&nbsp; avg points per post</small></span></span></a></div>
+                  </li>
+                  <li class="tab__item">
+                    <div class="post"><a href="https://hn.algolia.com/?query=marco.org&amp;sort=byPopularity&amp;prefix=false&amp;page=0&amp;dateRange=custom&amp;type=story&amp;dateStart=1293753600&amp;dateEnd=1325289600" target="_blank"><span class="post__score">7</span><span class="post__content"><span class="post__graph post__graph--bg-53"></span><span class="post__title">
+                            <h3>marco.org</h3></span><span class="post__info"><small><em>7860</em> total points |&nbsp;<em>147</em> posts | &nbsp;<em>53.4694</em>&nbsp; avg points per post</small></span></span></a></div>
+                  </li>
+                  <li class="tab__item">
+                    <div class="post"><a href="https://hn.algolia.com/?query=googleblog.blogspot.com&amp;sort=byPopularity&amp;prefix=false&amp;page=0&amp;dateRange=custom&amp;type=story&amp;dateStart=1293753600&amp;dateEnd=1325289600" target="_blank"><span class="post__score">8</span><span class="post__content"><span class="post__graph post__graph--bg-43"></span><span class="post__title">
+                            <h3>googleblog.blogspot.com</h3></span><span class="post__info"><small><em>10119</em> total points |&nbsp;<em>233</em> posts | &nbsp;<em>43.4292</em>&nbsp; avg points per post</small></span></span></a></div>
+                  </li>
+                  <li class="tab__item">
+                    <div class="post"><a href="https://hn.algolia.com/?query=pastebin.com&amp;sort=byPopularity&amp;prefix=false&amp;page=0&amp;dateRange=custom&amp;type=story&amp;dateStart=1293753600&amp;dateEnd=1325289600" target="_blank"><span class="post__score">9</span><span class="post__content"><span class="post__graph post__graph--bg-42"></span><span class="post__title">
+                            <h3>pastebin.com</h3></span><span class="post__info"><small><em>5611</em> total points |&nbsp;<em>133</em> posts | &nbsp;<em>42.188</em>&nbsp; avg points per post</small></span></span></a></div>
+                  </li>
+                  <li class="tab__item">
+                    <div class="post"><a href="https://hn.algolia.com/?query=blog.jgc.org&amp;sort=byPopularity&amp;prefix=false&amp;page=0&amp;dateRange=custom&amp;type=story&amp;dateStart=1293753600&amp;dateEnd=1325289600" target="_blank"><span class="post__score">10</span><span class="post__content"><span class="post__graph post__graph--bg-38"></span><span class="post__title">
+                            <h3>blog.jgc.org</h3></span><span class="post__info"><small><em>3569</em> total points |&nbsp;<em>94</em> posts | &nbsp;<em>37.9681</em>&nbsp; avg points per post</small></span></span></a></div>
+                  </li>
+                </ul>
+                <ul data-index='5' class="tab__content hidden">
+                  <li class="tab__item">
+                    <div class="post"><a href="https://hn.algolia.com/?query=raganwald.posterous.com&amp;sort=byPopularity&amp;prefix=false&amp;page=0&amp;dateRange=custom&amp;type=story&amp;dateStart=1325289600&amp;dateEnd=1356825600" target="_blank"><span class="post__score">1</span><span class="post__content"><span class="post__graph post__graph--bg-100"></span><span class="post__title">
+                            <h3>raganwald.posterous.com</h3></span><span class="post__info"><small><em>5996</em> total points |&nbsp;<em>52</em> posts | &nbsp;<em>115.308</em>&nbsp; avg points per post</small></span></span></a></div>
+                  </li>
+                  <li class="tab__item">
+                    <div class="post"><a href="https://hn.algolia.com/?query=paulgraham.com&amp;sort=byPopularity&amp;prefix=false&amp;page=0&amp;dateRange=custom&amp;type=story&amp;dateStart=1325289600&amp;dateEnd=1356825600" target="_blank"><span class="post__score">2</span><span class="post__content"><span class="post__graph post__graph--bg-90"></span><span class="post__title">
+                            <h3>paulgraham.com</h3></span><span class="post__info"><small><em>7692</em> total points |&nbsp;<em>85</em> posts | &nbsp;<em>90.4941</em>&nbsp; avg points per post</small></span></span></a></div>
+                  </li>
+                  <li class="tab__item">
+                    <div class="post"><a href="https://hn.algolia.com/?query=codinghorror.com&amp;sort=byPopularity&amp;prefix=false&amp;page=0&amp;dateRange=custom&amp;type=story&amp;dateStart=1325289600&amp;dateEnd=1356825600" target="_blank"><span class="post__score">3</span><span class="post__content"><span class="post__graph post__graph--bg-80"></span><span class="post__title">
+                            <h3>codinghorror.com</h3></span><span class="post__info"><small><em>9892</em> total points |&nbsp;<em>124</em> posts | &nbsp;<em>79.7742</em>&nbsp; avg points per post</small></span></span></a></div>
+                  </li>
+                  <li class="tab__item">
+                    <div class="post"><a href="https://hn.algolia.com/?query=jacquesmattheij.com&amp;sort=byPopularity&amp;prefix=false&amp;page=0&amp;dateRange=custom&amp;type=story&amp;dateStart=1325289600&amp;dateEnd=1356825600" target="_blank"><span class="post__score">4</span><span class="post__content"><span class="post__graph post__graph--bg-74"></span><span class="post__title">
+                            <h3>jacquesmattheij.com</h3></span><span class="post__info"><small><em>3759</em> total points |&nbsp;<em>51</em> posts | &nbsp;<em>73.7059</em>&nbsp; avg points per post</small></span></span></a></div>
+                  </li>
+                  <li class="tab__item">
+                    <div class="post"><a href="https://hn.algolia.com/?query=dcurt.is&amp;sort=byPopularity&amp;prefix=false&amp;page=0&amp;dateRange=custom&amp;type=story&amp;dateStart=1325289600&amp;dateEnd=1356825600" target="_blank"><span class="post__score">5</span><span class="post__content"><span class="post__graph post__graph--bg-69"></span><span class="post__title">
+                            <h3>dcurt.is</h3></span><span class="post__info"><small><em>4784</em> total points |&nbsp;<em>69</em> posts | &nbsp;<em>69.3333</em>&nbsp; avg points per post</small></span></span></a></div>
+                  </li>
+                  <li class="tab__item">
+                    <div class="post"><a href="https://hn.algolia.com/?query=blog.cloudflare.com&amp;sort=byPopularity&amp;prefix=false&amp;page=0&amp;dateRange=custom&amp;type=story&amp;dateStart=1325289600&amp;dateEnd=1356825600" target="_blank"><span class="post__score">6</span><span class="post__content"><span class="post__graph post__graph--bg-49"></span><span class="post__title">
+                            <h3>blog.cloudflare.com</h3></span><span class="post__info"><small><em>3031</em> total points |&nbsp;<em>62</em> posts | &nbsp;<em>48.8871</em>&nbsp; avg points per post</small></span></span></a></div>
+                  </li>
+                  <li class="tab__item">
+                    <div class="post"><a href="https://hn.algolia.com/?query=groklaw.net&amp;sort=byPopularity&amp;prefix=false&amp;page=0&amp;dateRange=custom&amp;type=story&amp;dateStart=1325289600&amp;dateEnd=1356825600" target="_blank"><span class="post__score">7</span><span class="post__content"><span class="post__graph post__graph--bg-47"></span><span class="post__title">
+                            <h3>groklaw.net</h3></span><span class="post__info"><small><em>5321</em> total points |&nbsp;<em>113</em> posts | &nbsp;<em>47.0885</em>&nbsp; avg points per post</small></span></span></a></div>
+                  </li>
+                  <li class="tab__item">
+                    <div class="post"><a href="https://hn.algolia.com/?query=37signals.com&amp;sort=byPopularity&amp;prefix=false&amp;page=0&amp;dateRange=custom&amp;type=story&amp;dateStart=1325289600&amp;dateEnd=1356825600" target="_blank"><span class="post__score">8</span><span class="post__content"><span class="post__graph post__graph--bg-47"></span><span class="post__title">
+                            <h3>37signals.com</h3></span><span class="post__info"><small><em>10172</em> total points |&nbsp;<em>217</em> posts | &nbsp;<em>46.8756</em>&nbsp; avg points per post</small></span></span></a></div>
+                  </li>
+                  <li class="tab__item">
+                    <div class="post"><a href="https://hn.algolia.com/?query=marco.org&amp;sort=byPopularity&amp;prefix=false&amp;page=0&amp;dateRange=custom&amp;type=story&amp;dateStart=1325289600&amp;dateEnd=1356825600" target="_blank"><span class="post__score">9</span><span class="post__content"><span class="post__graph post__graph--bg-47"></span><span class="post__title">
+                            <h3>marco.org</h3></span><span class="post__info"><small><em>7344</em> total points |&nbsp;<em>157</em> posts | &nbsp;<em>46.7771</em>&nbsp; avg points per post</small></span></span></a></div>
+                  </li>
+                  <li class="tab__item">
+                    <div class="post"><a href="https://hn.algolia.com/?query=diegobasch.com&amp;sort=byPopularity&amp;prefix=false&amp;page=0&amp;dateRange=custom&amp;type=story&amp;dateStart=1325289600&amp;dateEnd=1356825600" target="_blank"><span class="post__score">10</span><span class="post__content"><span class="post__graph post__graph--bg-46"></span><span class="post__title">
+                            <h3>diegobasch.com</h3></span><span class="post__info"><small><em>2379</em> total points |&nbsp;<em>52</em> posts | &nbsp;<em>45.75</em>&nbsp; avg points per post</small></span></span></a></div>
+                  </li>
+                </ul>
+                <ul data-index='6' class="tab__content hidden">
+                  <li class="tab__item">
+                    <div class="post"><a href="https://hn.algolia.com/?query=paulgraham.com&amp;sort=byPopularity&amp;prefix=false&amp;page=0&amp;dateRange=custom&amp;type=story&amp;dateStart=1356825600&amp;dateEnd=1388361600" target="_blank"><span class="post__score">1</span><span class="post__content"><span class="post__graph post__graph--bg-78"></span><span class="post__title">
+                            <h3>paulgraham.com</h3></span><span class="post__info"><small><em>6179</em> total points |&nbsp;<em>79</em> posts | &nbsp;<em>78.2152</em>&nbsp; avg points per post</small></span></span></a></div>
+                  </li>
+                  <li class="tab__item">
+                    <div class="post"><a href="https://hn.algolia.com/?query=googleblog.blogspot.com&amp;sort=byPopularity&amp;prefix=false&amp;page=0&amp;dateRange=custom&amp;type=story&amp;dateStart=1356825600&amp;dateEnd=1388361600" target="_blank"><span class="post__score">2</span><span class="post__content"><span class="post__graph post__graph--bg-66"></span><span class="post__title">
+                            <h3>googleblog.blogspot.com</h3></span><span class="post__info"><small><em>5184</em> total points |&nbsp;<em>79</em> posts | &nbsp;<em>65.6203</em>&nbsp; avg points per post</small></span></span></a></div>
+                  </li>
+                  <li class="tab__item">
+                    <div class="post"><a href="https://hn.algolia.com/?query=eff.org&amp;sort=byPopularity&amp;prefix=false&amp;page=0&amp;dateRange=custom&amp;type=story&amp;dateStart=1356825600&amp;dateEnd=1388361600" target="_blank"><span class="post__score">3</span><span class="post__content"><span class="post__graph post__graph--bg-48"></span><span class="post__title">
+                            <h3>eff.org</h3></span><span class="post__info"><small><em>15829</em> total points |&nbsp;<em>328</em> posts | &nbsp;<em>48.2591</em>&nbsp; avg points per post</small></span></span></a></div>
+                  </li>
+                  <li class="tab__item">
+                    <div class="post"><a href="https://hn.algolia.com/?query=petitions.whitehouse.gov&amp;sort=byPopularity&amp;prefix=false&amp;page=0&amp;dateRange=custom&amp;type=story&amp;dateStart=1356825600&amp;dateEnd=1388361600" target="_blank"><span class="post__score">4</span><span class="post__content"><span class="post__graph post__graph--bg-48"></span><span class="post__title">
+                            <h3>petitions.whitehouse.gov</h3></span><span class="post__info"><small><em>6702</em> total points |&nbsp;<em>139</em> posts | &nbsp;<em>48.2158</em>&nbsp; avg points per post</small></span></span></a></div>
+                  </li>
+                  <li class="tab__item">
+                    <div class="post"><a href="https://hn.algolia.com/?query=priceonomics.com&amp;sort=byPopularity&amp;prefix=false&amp;page=0&amp;dateRange=custom&amp;type=story&amp;dateStart=1356825600&amp;dateEnd=1388361600" target="_blank"><span class="post__score">5</span><span class="post__content"><span class="post__graph post__graph--bg-47"></span><span class="post__title">
+                            <h3>priceonomics.com</h3></span><span class="post__info"><small><em>4213</em> total points |&nbsp;<em>90</em> posts | &nbsp;<em>46.8111</em>&nbsp; avg points per post</small></span></span></a></div>
+                  </li>
+                  <li class="tab__item">
+                    <div class="post"><a href="https://hn.algolia.com/?query=gwern.net&amp;sort=byPopularity&amp;prefix=false&amp;page=0&amp;dateRange=custom&amp;type=story&amp;dateStart=1356825600&amp;dateEnd=1388361600" target="_blank"><span class="post__score">6</span><span class="post__content"><span class="post__graph post__graph--bg-47"></span><span class="post__title">
+                            <h3>gwern.net</h3></span><span class="post__info"><small><em>3505</em> total points |&nbsp;<em>75</em> posts | &nbsp;<em>46.7333</em>&nbsp; avg points per post</small></span></span></a></div>
+                  </li>
+                  <li class="tab__item">
+                    <div class="post"><a href="https://hn.algolia.com/?query=blog.mozilla.org&amp;sort=byPopularity&amp;prefix=false&amp;page=0&amp;dateRange=custom&amp;type=story&amp;dateStart=1356825600&amp;dateEnd=1388361600" target="_blank"><span class="post__score">7</span><span class="post__content"><span class="post__graph post__graph--bg-47"></span><span class="post__title">
+                            <h3>blog.mozilla.org</h3></span><span class="post__info"><small><em>6392</em> total points |&nbsp;<em>137</em> posts | &nbsp;<em>46.6569</em>&nbsp; avg points per post</small></span></span></a></div>
+                  </li>
+                  <li class="tab__item">
+                    <div class="post"><a href="https://hn.algolia.com/?query=marco.org&amp;sort=byPopularity&amp;prefix=false&amp;page=0&amp;dateRange=custom&amp;type=story&amp;dateStart=1356825600&amp;dateEnd=1388361600" target="_blank"><span class="post__score">8</span><span class="post__content"><span class="post__graph post__graph--bg-45"></span><span class="post__title">
+                            <h3>marco.org</h3></span><span class="post__info"><small><em>6639</em> total points |&nbsp;<em>147</em> posts | &nbsp;<em>45.1633</em>&nbsp; avg points per post</small></span></span></a></div>
+                  </li>
+                  <li class="tab__item">
+                    <div class="post"><a href="https://hn.algolia.com/?query=penny-arcade.com&amp;sort=byPopularity&amp;prefix=false&amp;page=0&amp;dateRange=custom&amp;type=story&amp;dateStart=1356825600&amp;dateEnd=1388361600" target="_blank"><span class="post__score">9</span><span class="post__content"><span class="post__graph post__graph--bg-44"></span><span class="post__title">
+                            <h3>penny-arcade.com</h3></span><span class="post__info"><small><em>2792</em> total points |&nbsp;<em>63</em> posts | &nbsp;<em>44.3175</em>&nbsp; avg points per post</small></span></span></a></div>
+                  </li>
+                  <li class="tab__item">
+                    <div class="post"><a href="https://hn.algolia.com/?query=aclu.org&amp;sort=byPopularity&amp;prefix=false&amp;page=0&amp;dateRange=custom&amp;type=story&amp;dateStart=1356825600&amp;dateEnd=1388361600" target="_blank"><span class="post__score">10</span><span class="post__content"><span class="post__graph post__graph--bg-43"></span><span class="post__title">
+                            <h3>aclu.org</h3></span><span class="post__info"><small><em>2402</em> total points |&nbsp;<em>56</em> posts | &nbsp;<em>42.8929</em>&nbsp; avg points per post</small></span></span></a></div>
+                  </li>
+                </ul>
+                <ul data-index='7' class="tab__content hidden">
+                  <li class="tab__item">
+                    <div class="post"><a href="https://hn.algolia.com/?query=blog.ycombinator.com&amp;sort=byPopularity&amp;prefix=false&amp;page=0&amp;dateRange=custom&amp;type=story&amp;dateStart=1388361600&amp;dateEnd=1419897600" target="_blank"><span class="post__score">1</span><span class="post__content"><span class="post__graph post__graph--bg-100"></span><span class="post__title">
+                            <h3>blog.ycombinator.com</h3></span><span class="post__info"><small><em>10925</em> total points |&nbsp;<em>67</em> posts | &nbsp;<em>163.06</em>&nbsp; avg points per post</small></span></span></a></div>
+                  </li>
+                  <li class="tab__item">
+                    <div class="post"><a href="https://hn.algolia.com/?query=stripe.com&amp;sort=byPopularity&amp;prefix=false&amp;page=0&amp;dateRange=custom&amp;type=story&amp;dateStart=1388361600&amp;dateEnd=1419897600" target="_blank"><span class="post__score">2</span><span class="post__content"><span class="post__graph post__graph--bg-100"></span><span class="post__title">
+                            <h3>stripe.com</h3></span><span class="post__info"><small><em>6964</em> total points |&nbsp;<em>51</em> posts | &nbsp;<em>136.549</em>&nbsp; avg points per post</small></span></span></a></div>
+                  </li>
+                  <li class="tab__item">
+                    <div class="post"><a href="https://hn.algolia.com/?query=googleblog.blogspot.com&amp;sort=byPopularity&amp;prefix=false&amp;page=0&amp;dateRange=custom&amp;type=story&amp;dateStart=1388361600&amp;dateEnd=1419897600" target="_blank"><span class="post__score">3</span><span class="post__content"><span class="post__graph post__graph--bg-74"></span><span class="post__title">
+                            <h3>googleblog.blogspot.com</h3></span><span class="post__info"><small><em>5028</em> total points |&nbsp;<em>68</em> posts | &nbsp;<em>73.9412</em>&nbsp; avg points per post</small></span></span></a></div>
+                  </li>
+                  <li class="tab__item">
+                    <div class="post"><a href="https://hn.algolia.com/?query=paulgraham.com&amp;sort=byPopularity&amp;prefix=false&amp;page=0&amp;dateRange=custom&amp;type=story&amp;dateStart=1388361600&amp;dateEnd=1419897600" target="_blank"><span class="post__score">4</span><span class="post__content"><span class="post__graph post__graph--bg-66"></span><span class="post__title">
+                            <h3>paulgraham.com</h3></span><span class="post__info"><small><em>5123</em> total points |&nbsp;<em>78</em> posts | &nbsp;<em>65.6795</em>&nbsp; avg points per post</small></span></span></a></div>
+                  </li>
+                  <li class="tab__item">
+                    <div class="post"><a href="https://hn.algolia.com/?query=eff.org&amp;sort=byPopularity&amp;prefix=false&amp;page=0&amp;dateRange=custom&amp;type=story&amp;dateStart=1388361600&amp;dateEnd=1419897600" target="_blank"><span class="post__score">5</span><span class="post__content"><span class="post__graph post__graph--bg-65"></span><span class="post__title">
+                            <h3>eff.org</h3></span><span class="post__info"><small><em>16843</em> total points |&nbsp;<em>261</em> posts | &nbsp;<em>64.5326</em>&nbsp; avg points per post</small></span></span></a></div>
+                  </li>
+                  <li class="tab__item">
+                    <div class="post"><a href="https://hn.algolia.com/?query=blog.mozilla.org&amp;sort=byPopularity&amp;prefix=false&amp;page=0&amp;dateRange=custom&amp;type=story&amp;dateStart=1388361600&amp;dateEnd=1419897600" target="_blank"><span class="post__score">6</span><span class="post__content"><span class="post__graph post__graph--bg-56"></span><span class="post__title">
+                            <h3>blog.mozilla.org</h3></span><span class="post__info"><small><em>9163</em> total points |&nbsp;<em>164</em> posts | &nbsp;<em>55.872</em>&nbsp; avg points per post</small></span></span></a></div>
+                  </li>
+                  <li class="tab__item">
+                    <div class="post"><a href="https://hn.algolia.com/?query=microsoft.com&amp;sort=byPopularity&amp;prefix=false&amp;page=0&amp;dateRange=custom&amp;type=story&amp;dateStart=1388361600&amp;dateEnd=1419897600" target="_blank"><span class="post__score">7</span><span class="post__content"><span class="post__graph post__graph--bg-55"></span><span class="post__title">
+                            <h3>microsoft.com</h3></span><span class="post__info"><small><em>3516</em> total points |&nbsp;<em>64</em> posts | &nbsp;<em>54.9375</em>&nbsp; avg points per post</small></span></span></a></div>
+                  </li>
+                  <li class="tab__item">
+                    <div class="post"><a href="https://hn.algolia.com/?query=code.facebook.com&amp;sort=byPopularity&amp;prefix=false&amp;page=0&amp;dateRange=custom&amp;type=story&amp;dateStart=1388361600&amp;dateEnd=1419897600" target="_blank"><span class="post__score">8</span><span class="post__content"><span class="post__graph post__graph--bg-53"></span><span class="post__title">
+                            <h3>code.facebook.com</h3></span><span class="post__info"><small><em>3413</em> total points |&nbsp;<em>64</em> posts | &nbsp;<em>53.3281</em>&nbsp; avg points per post</small></span></span></a></div>
+                  </li>
+                  <li class="tab__item">
+                    <div class="post"><a href="https://hn.algolia.com/?query=developer.apple.com&amp;sort=byPopularity&amp;prefix=false&amp;page=0&amp;dateRange=custom&amp;type=story&amp;dateStart=1388361600&amp;dateEnd=1419897600" target="_blank"><span class="post__score">9</span><span class="post__content"><span class="post__graph post__graph--bg-52"></span><span class="post__title">
+                            <h3>developer.apple.com</h3></span><span class="post__info"><small><em>5206</em> total points |&nbsp;<em>101</em> posts | &nbsp;<em>51.5446</em>&nbsp; avg points per post</small></span></span></a></div>
+                  </li>
+                  <li class="tab__item">
+                    <div class="post"><a href="https://hn.algolia.com/?query=hacks.mozilla.org&amp;sort=byPopularity&amp;prefix=false&amp;page=0&amp;dateRange=custom&amp;type=story&amp;dateStart=1388361600&amp;dateEnd=1419897600" target="_blank"><span class="post__score">10</span><span class="post__content"><span class="post__graph post__graph--bg-47"></span><span class="post__title">
+                            <h3>hacks.mozilla.org</h3></span><span class="post__info"><small><em>5779</em> total points |&nbsp;<em>124</em> posts | &nbsp;<em>46.6048</em>&nbsp; avg points per post</small></span></span></a></div>
+                  </li>
+                </ul>
+                <ul data-index='8' class="tab__content active">
+                  <li class="tab__item">
+                    <div class="post"><a href="https://hn.algolia.com/?query=eff.org&amp;sort=byPopularity&amp;prefix=false&amp;page=0&amp;dateRange=custom&amp;type=story&amp;dateStart=1419897600&amp;dateEnd=1451433600" target="_blank"><span class="post__score">1</span><span class="post__content"><span class="post__graph post__graph--bg-72"></span><span class="post__title">
+                            <h3>eff.org</h3></span><span class="post__info"><small><em>12096</em> total points |&nbsp;<em>167</em> posts | &nbsp;<em>72.4311</em>&nbsp; avg points per post</small></span></span></a></div>
+                  </li>
+                  <li class="tab__item">
+                    <div class="post"><a href="https://hn.algolia.com/?query=blogs.msdn.com&amp;sort=byPopularity&amp;prefix=false&amp;page=0&amp;dateRange=custom&amp;type=story&amp;dateStart=1419897600&amp;dateEnd=1451433600" target="_blank"><span class="post__score">2</span><span class="post__content"><span class="post__graph post__graph--bg-49"></span><span class="post__title">
+                            <h3>blogs.msdn.com</h3></span><span class="post__info"><small><em>4881</em> total points |&nbsp;<em>100</em> posts | &nbsp;<em>48.81</em>&nbsp; avg points per post</small></span></span></a></div>
+                  </li>
+                  <li class="tab__item">
+                    <div class="post"><a href="https://hn.algolia.com/?query=priceonomics.com&amp;sort=byPopularity&amp;prefix=false&amp;page=0&amp;dateRange=custom&amp;type=story&amp;dateStart=1419897600&amp;dateEnd=1451433600" target="_blank"><span class="post__score">3</span><span class="post__content"><span class="post__graph post__graph--bg-34"></span><span class="post__title">
+                            <h3>priceonomics.com</h3></span><span class="post__info"><small><em>2137</em> total points |&nbsp;<em>62</em> posts | &nbsp;<em>34.4677</em>&nbsp; avg points per post</small></span></span></a></div>
+                  </li>
+                  <li class="tab__item">
+                    <div class="post"><a href="https://hn.algolia.com/?query=lwn.net&amp;sort=byPopularity&amp;prefix=false&amp;page=0&amp;dateRange=custom&amp;type=story&amp;dateStart=1419897600&amp;dateEnd=1451433600" target="_blank"><span class="post__score">4</span><span class="post__content"><span class="post__graph post__graph--bg-34"></span><span class="post__title">
+                            <h3>lwn.net</h3></span><span class="post__info"><small><em>2167</em> total points |&nbsp;<em>64</em> posts | &nbsp;<em>33.8594</em>&nbsp; avg points per post</small></span></span></a></div>
+                  </li>
+                  <li class="tab__item">
+                    <div class="post"><a href="https://hn.algolia.com/?query=google.com&amp;sort=byPopularity&amp;prefix=false&amp;page=0&amp;dateRange=custom&amp;type=story&amp;dateStart=1419897600&amp;dateEnd=1451433600" target="_blank"><span class="post__score">5</span><span class="post__content"><span class="post__graph post__graph--bg-33"></span><span class="post__title">
+                            <h3>google.com</h3></span><span class="post__info"><small><em>3112</em> total points |&nbsp;<em>94</em> posts | &nbsp;<em>33.1064</em>&nbsp; avg points per post</small></span></span></a></div>
+                  </li>
+                  <li class="tab__item">
+                    <div class="post"><a href="https://hn.algolia.com/?query=aws.amazon.com&amp;sort=byPopularity&amp;prefix=false&amp;page=0&amp;dateRange=custom&amp;type=story&amp;dateStart=1419897600&amp;dateEnd=1451433600" target="_blank"><span class="post__score">6</span><span class="post__content"><span class="post__graph post__graph--bg-32"></span><span class="post__title">
+                            <h3>aws.amazon.com</h3></span><span class="post__info"><small><em>2031</em> total points |&nbsp;<em>63</em> posts | &nbsp;<em>32.2381</em>&nbsp; avg points per post</small></span></span></a></div>
+                  </li>
+                  <li class="tab__item">
+                    <div class="post"><a href="https://hn.algolia.com/?query=newyorker.com&amp;sort=byPopularity&amp;prefix=false&amp;page=0&amp;dateRange=custom&amp;type=story&amp;dateStart=1419897600&amp;dateEnd=1451433600" target="_blank"><span class="post__score">7</span><span class="post__content"><span class="post__graph post__graph--bg-30"></span><span class="post__title">
+                            <h3>newyorker.com</h3></span><span class="post__info"><small><em>5471</em> total points |&nbsp;<em>182</em> posts | &nbsp;<em>30.0604</em>&nbsp; avg points per post</small></span></span></a></div>
+                  </li>
+                  <li class="tab__item">
+                    <div class="post"><a href="https://hn.algolia.com/?query=docs.google.com&amp;sort=byPopularity&amp;prefix=false&amp;page=0&amp;dateRange=custom&amp;type=story&amp;dateStart=1419897600&amp;dateEnd=1451433600" target="_blank"><span class="post__score">8</span><span class="post__content"><span class="post__graph post__graph--bg-30"></span><span class="post__title">
+                            <h3>docs.google.com</h3></span><span class="post__info"><small><em>2780</em> total points |&nbsp;<em>94</em> posts | &nbsp;<em>29.5745</em>&nbsp; avg points per post</small></span></span></a></div>
+                  </li>
+                  <li class="tab__item">
+                    <div class="post"><a href="https://hn.algolia.com/?query=amazon.com&amp;sort=byPopularity&amp;prefix=false&amp;page=0&amp;dateRange=custom&amp;type=story&amp;dateStart=1419897600&amp;dateEnd=1451433600" target="_blank"><span class="post__score">9</span><span class="post__content"><span class="post__graph post__graph--bg-29"></span><span class="post__title">
+                            <h3>amazon.com</h3></span><span class="post__info"><small><em>1893</em> total points |&nbsp;<em>65</em> posts | &nbsp;<em>29.1231</em>&nbsp; avg points per post</small></span></span></a></div>
+                  </li>
+                  <li class="tab__item">
+                    <div class="post"><a href="https://hn.algolia.com/?query=firstlook.org&amp;sort=byPopularity&amp;prefix=false&amp;page=0&amp;dateRange=custom&amp;type=story&amp;dateStart=1419897600&amp;dateEnd=1451433600" target="_blank"><span class="post__score">10</span><span class="post__content"><span class="post__graph post__graph--bg-28"></span><span class="post__title">
+                            <h3>firstlook.org</h3></span><span class="post__info"><small><em>1907</em> total points |&nbsp;<em>69</em> posts | &nbsp;<em>27.6377</em>&nbsp; avg points per post</small></span></span></a></div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="page__controllers--previous">
+            <div class="previous"><a><span class="glyphicon glyphicon-chevron-left"></span></a></div>
+          </div>
+          <div class="page__controllers--next">
+            <div class="next"><a><span class="glyphicon glyphicon-chevron-right"></span></a></div>
+          </div>
+        </div>
+      </div>
+      <div id="p6" class="page active">
+        <div id="karma" class="karma">
+          <div class="container">
+            <div class="karma__title title">
+              <div class="title__caption">
+                <h1>Karma repartition among active users</h1>
+              </div>
+            </div>
+            <div class="content">
+              <div class="content__legend">
+                <p>The population of registered Hacker News users has grown considerably over time, as shown in the chart below. However, new user registrations flattened out around 10,000 new users per quarter in 2011 and appear... <a class='info-button'>Read More</a></p>
+              </div>
+            </div>
+          </div>
+          <div class="page__controllers--previous">
+            <div class="previous"><a><span class="glyphicon glyphicon-chevron-left"></span></a></div>
+          </div>
+          <div class="page__controllers--next">
+            <div class="next"><a><span class="glyphicon glyphicon-chevron-right"></span></a></div>
+          </div>
+          <div class="info">
+            <div class="info__content">
+              <div class="info__close"><i class="fa fa-lg fa-close"></i></div>
+              <h3>HN's population is growing steadily</h3>
+              <p>The population of registered Hacker News users has grown considerably over time, as shown in the chart below. However, new user registrations flattened out around 10,000 new users per quarter in 2011 and appear to actually be slightly lower so far in 2012.</p>
+              <p>I was surprised to see this decline in growth rate, which goes against the argument that Hacker News has gone too mainstream. To me, the recent flatness suggests a market saturation point. If HN’s userbase is bounded by the number of new “startup tech enthusiasts” arriving on the scene each year, its base may not be changing much after all.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="p7" class="page active last">
+        <div id="end" class="end">
+          <div class="end__title title">
+            <div class="title__caption">
+              <h1>Thanks for reading!</h1>
+              <h3>Your likes and shares make me happy</h3>
+              <div class="share"><a href="https://www.facebook.com/sharer/sharer.php?u=https://arnauddri.github.io/hn" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600');return false;" target="_blank" title="Share on Facebook"><i class="fa fa-3x fa-facebook"></i></a><a href="http://twitter.com/share?url=https://arnauddri.github.io/hn&amp;text=Hacker News: Crunching the Numbers via @arnauddri - " target="_blank"><i class="fa fa-3x fa-twitter"></i></a><a href="http://reddit.com/submit?url=https://arnauddri.github.io/hn&amp;title=Hacker News: Crunching the Numbers" target="_blank"><i class="fa fa-3x fa-reddit"></i></a><a href="">
+                  <h3>Y</h3></a></div>
+            </div>
+          </div>
+          <div class="page__controllers--previous">
+            <div class="previous"><a><span class="glyphicon glyphicon-chevron-left"></span></a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+      <div class="footer--left"><img src="./../static/img/arnauddri.jpeg" class="img-circle"><a href="https://twitter.com/arnauddri">by <b>@arnauddri</b> with &nbsp;<i class="fa fa-heart"></i><span class="underline"></span></a></div>
+      <div class="footer--middle">
+        <ul>
+          <li><i id="p0" data-hash="home" class="fa fa-circle"></i></li>
+          <li><i id="p1" data-hash="users" class="fa fa-circle"></i></li>
+          <li><i id="p2" data-hash="submissions" class="fa fa-circle"></i></li>
+          <li><i id="p3" data-hash="cohort" class="fa fa-circle"></i></li>
+          <li><i id="p4" data-hash="topics" class="fa fa-circle"></i></li>
+          <li><i id="p5" data-hash="sources" class="fa fa-circle"></i></li>
+          <li><i id="p6" data-hash="karma" class="fa fa-circle"></i></li>
+          <li><i id="p7" data-hash="end" class="fa fa-circle"></i></li>
+        </ul>
+      </div>
+      <div class="footer--right"><span><a href="https://github.com/arnauddri">View on GitHub<span class="underline"></span></a><i class="fa fa-github fa-lg"></i></span></div>
+    </div>
+    <!--
+    Bootstrap core JavaScript
+    ==================================================
+    -->
+    <!-- Placed at the end of the document so the pages load faster-->
+    <script src="http://d3js.org/d3.v3.js" charset="utf-8"></script>
+    <script src="http://labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug-->
+    <script src="./js/main.js"></script>
+  </body>
+</html>

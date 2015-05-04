@@ -1,0 +1,58 @@
+include ./../../data/cohort/cohort.jade
+#cohort.cohort
+  .container
+    .cohort__title.title
+      .title__caption
+        h1 HN's Cohort Analysis: Retention almost halved since 2010
+    .cohort__content.content
+      .content__legend
+        p#cohort__legend.
+          <em>8254</em> people first posted on HN in <em>Q1 2010</em>, <em>4111</em> were still posting <em>1</em> quarters later, i.e. <em>50%</em>
+
+    .cohort__content.content
+      table
+        thead.head
+          tr
+            th
+            th
+            th
+            th(colspan='34') Quarters after
+          tr
+            th Year
+            th Quarter
+            th People
+            - for (var i = 0; i < 21; ++i) {
+              th.head__quarter= i + 1
+            - }
+
+        tbody.body
+          - for (var i = 0; i < 20; ++i) {
+            tr
+              - if (i % 4 == 0) {
+                - var year = 2010 + i / 4
+                td.body__year(rowspan='4')= 2010 + i / 4
+              - }
+              td.body__quarter
+                | Q
+                = i % 4 + 1
+              td.body__people= quarters[i][0]
+              - for (var k = 1; k < quarters[i].length; ++k) {
+                - var val = Math.round(quarters[i][k]/quarters[i][0] * 100)
+                td.body__value(class=('body__value--' + (Math.round(val / 10))),
+                  data-n=k,
+                  data-pct=val,
+                  data-start=quarters[i][0],
+                  data-now=quarters[i][k],
+                  data-quarter=('Q' + k + ' ' + year))= val
+                   | %
+              - }
+          - }
+
+  .page__controllers--previous
+    .previous
+      a
+        span.glyphicon.glyphicon-chevron-left
+  .page__controllers--next
+    .next
+      a
+        span.glyphicon.glyphicon-chevron-right

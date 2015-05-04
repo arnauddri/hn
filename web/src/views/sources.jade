@@ -1,0 +1,53 @@
+include ./../../data/sources/sources.jade
+#sources.sources
+  .container
+    .sources__title.title
+      .title__caption
+        h1 HN sources
+    .sources__content.content
+      .content__legend
+        p.
+          MOST UPVOTED DOMAINS PER YEAR
+      .tab
+        ul.tab__header
+          li.tab__control 2007
+          li.tab__control 2008
+          li.tab__control 2009
+          li.tab__control 2010
+          li.tab__control 2011
+          li.tab__control 2012
+          li.tab__control 2013
+          li.tab__control 2014
+          li.tab__control.active 2015
+
+        - for (var j = 0; j < 9; ++j) {
+            ul.tab__content(class= (j == 8) ? 'active' : 'hidden' )(data-index=j)
+              - for (var i = 0; i < 10; ++i) {
+                li.tab__item
+                  div.post
+                    a(href='https://hn.algolia.com/?query=' + top_year[j][i][0] + '&sort=byPopularity&prefix=false&page=0&dateRange=custom&type=story&dateStart=' + (1167609600 + j * 31536000) + '&dateEnd='+ (1167609600 + (j + 1) * 31536000), target='_blank')
+                      span.post__score= i+1
+                      span.post__content
+                        - var idx = top_year[j][i][3]
+                        span.post__graph(class= 'post__graph--bg-' + Math.round(Math.min(idx, 100)))
+                        span.post__title
+                          h3=top_year[j][i][0]
+                        span.post__info
+                          small
+                            em= top_year[j][i][1]
+                            |  total points |&nbsp;
+                            em= top_year[j][i][2]
+                            |  posts | &nbsp;
+                            em= top_year[j][i][3]
+                            | &nbsp; avg points per post
+              - }
+        - }
+
+  .page__controllers--previous
+    .previous
+      a
+        span.glyphicon.glyphicon-chevron-left
+  .page__controllers--next
+    .next
+      a
+        span.glyphicon.glyphicon-chevron-right
