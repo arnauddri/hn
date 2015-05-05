@@ -43,12 +43,12 @@
           <div class="container">
             <div class="users__title title">
               <div class="title__caption">
-                <h1>HN's Population Growth has considerably slowed down</h1><i class="info-button fa fa-2x fa-info-circle"></i>
+                <h1>HN's Growth has slowed down in recent years</h1><i class="info-button fa fa-2x fa-info-circle"></i>
               </div>
             </div>
             <div class="users__content content">
               <div class="content__legend">
-                <p>The population of registered Hacker News users has grown considerably over time, as shown in the chart below. However, new user registrations flattened out around 10,000 new users per quarter in 2011 and appear... <a class='info-button'>Read More</a></p>
+                <p>The population of registered Hacker News users has grown considerably up until 2013. The number of active users is now stagnating around 10,000 per quarters... <a class='info-button'>Read More</a></p>
               </div>
               <div class="chart-picker">
                 <form>
@@ -63,11 +63,11 @@
             <div class="info">
               <div class="info__content">
                 <div class="info__close"><i class="fa fa-lg fa-close"></i></div>
-                <h3>HN's Population Growth has considerably slowed down</h3>
-                <p>The population of registered Hacker News users has grown considerably up until 2013. New registrations are now stagnating around 10,000 per quarters.</p>
-                <p>User contributions are made of posts and comments: posts have flattened around 60k per quater while comments kepts groing at a decent pace until 2013.</p>
+                <h3>HN's Growth has slowed down in recent years</h3>
+                <p>The population of registered Hacker News users has grown considerably up until 2013. The number of active users is now stagnating around 10,000 per quarters. This doesn't account for passive visitors: people coming to the website without posting anything. They are probably far more numerous and my guess is that this number is still growing. This hypothesis cannot be confirmed based on public data as all we have access to are posts and comments.</p>
+                <p>Going deeper in the split of comments/posts, we see that the number of story posts is now quite stable (since 2013). On the other hand, the number of comments is more volatile and its variation does not reflect explicitly the changes in the number of active users.</p>
                 <p>
-                  Active users are defined as users who contributed to HN with either a comment or a story post. The current HN API doesn't enable query to get the list of current all of HN users.
+                  This analysis does not take into account the number of upvotes which could probably tell a bit more about more passive users as I suppose a very large part of HN audience is made of users not posting anything but merely upvoting comments or posts.
                   
                 </p>
               </div>
@@ -1392,12 +1392,12 @@
           <div class="container">
             <div class="karma__title title">
               <div class="title__caption">
-                <h1>Karma repartition among active users</h1>
+                <h1>Karma repartition among active users</h1><i class="info-button fa fa-2x fa-info-circle"></i>
               </div>
             </div>
             <div class="content">
               <div class="content__legend">
-                <p>The population of registered Hacker News users has grown considerably over time, as shown in the chart below. However, new user registrations flattened out around 10,000 new users per quarter in 2011 and appear... <a class='info-button'>Read More</a></p>
+                <p>With 80% of users with a karma below 30, the chart suggests that most users are not very active and contribute rarely to the website... <a class='info-button'>Read More</a></p>
               </div>
             </div>
           </div>
@@ -1410,9 +1410,9 @@
           <div class="info">
             <div class="info__content">
               <div class="info__close"><i class="fa fa-lg fa-close"></i></div>
-              <h3>HN's population is growing steadily</h3>
-              <p>The population of registered Hacker News users has grown considerably over time, as shown in the chart below. However, new user registrations flattened out around 10,000 new users per quarter in 2011 and appear to actually be slightly lower so far in 2012.</p>
-              <p>I was surprised to see this decline in growth rate, which goes against the argument that Hacker News has gone too mainstream. To me, the recent flatness suggests a market saturation point. If HN’s userbase is bounded by the number of new “startup tech enthusiasts” arriving on the scene each year, its base may not be changing much after all.</p>
+              <h3>Karma repartition among active users</h3>
+              <p>With 80% of users with a karma below 30, the chart suggests that most users are not very active and contribute rarely to the website. On the other hand, 2.5% of users have a karma above 1000: they account for most power users.</p>
+              <p>This chart should however be taken with caution for 2 reasons. First, HN's API no longer returns the scores for comments which bias the analysis taking into account only points due to story posts. Second, story points generate karma with a higher variance with some posts bringing 500+ points at once to a single user.</p>
             </div>
           </div>
         </div>
@@ -1461,5 +1461,14 @@
     <script src="http://labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug-->
     <script src="./js/main.js"></script>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      
+      ga('create', 'UA-62615708-1', 'auto');
+      ga('send', 'pageview');
+    </script>
   </body>
 </html>
